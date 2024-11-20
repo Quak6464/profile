@@ -8,27 +8,34 @@
     <link rel="icon" href="assets/imgs/inaya_pfp.gif">
 
     <!-- Title -->
-    <title>🌴 ・ Bilota Home</title>
+    <title>🌴 ・ Bilota</title>
 
-    <!-- Fonts and CSS -->
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous">
     <style>
         /* Global Styles */
         body {
             font-family: Arial, sans-serif;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #0d1117; /* Dark background for consistency */
-            color: #fff; /* Light text for contrast */
+            background-color: #121212; /* Dark background */
+            color: #ffffff; /* Light text for contrast */
         }
 
         header {
-            background-color: #161b22; /* Slightly lighter header */
+            background-color: #1e1e1e; /* Slightly lighter for distinction */
             padding: 1rem 2rem;
+            border-bottom: 2px solid #333;
+        }
+
+        nav {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            border-bottom: 2px solid #222;
         }
 
         .header_logo img {
@@ -37,92 +44,92 @@
 
         .nav_links {
             list-style: none;
+            padding: 0;
+            margin: 0;
             display: flex;
             gap: 1.5rem;
-            margin: 0;
-            padding: 0;
         }
 
         .nav_links a {
             text-decoration: none;
-            color: #fff;
+            color: #ffffff;
             font-weight: bold;
-            transition: color 0.3s;
+            padding: 0.5rem;
         }
 
         .nav_links a:hover {
             color: #00aaff; /* Highlight color */
         }
 
-        .main {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding: 2rem 1rem;
+        main {
+            padding: 2rem;
         }
 
-        .main img {
-            max-width: 150px;
-            border-radius: 50%;
-            margin-bottom: 1rem;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        }
-
-        .main span {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #00aaff;
-            margin-bottom: 1rem;
-        }
-
-        .main p {
-            font-size: 1rem;
+        section {
             margin-bottom: 2rem;
         }
 
-        .social_links {
-            display: flex;
-            gap: 1.5rem;
+        .intro_section, .about_section, .contact_section {
+            background-color: #1e1e1e; /* Box background */
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            color: #ffffff; /* White text */
         }
 
-        .social_links a {
-            color: #fff;
-            font-size: 1.5rem;
-            transition: color 0.3s;
+        .intro_section h1,
+        .about_section h2,
+        .contact_section h2 {
+            color: #00aaff; /* Accent color for headings */
         }
 
-        .social_links a:hover {
+        footer {
+            background-color: #1e1e1e;
+            color: #ffffff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        footer a {
             color: #00aaff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-
     <!-- Header Section -->
     <header>
-        <div class="header_logo">
-            <img src="assets/imgs/bilota.png" alt="Bilota Logo">
-        </div>
-        <ul class="nav_links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="shop.html">Shop</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+        <nav>
+            <div class="header_logo">
+                <img src="assets/imgs/bilota.png" alt="Bilota Logo">
+            </div>
+            <ul class="nav_links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Main Content -->
-    <section class="main">
-        <img src="assets/imgs/bilota.png" alt="Bilota Logo">
-        <span>Welcome to Bilota</span>
-        <p>Your one-stop destination for creativity and innovation. Dive into our world and discover something amazing!</p>
-        <div class="social_links">
-            <a href="https://discord.gg/JuEeGw.eHrb" target="_blank"><i class="fab fa-discord"></i></a>
-            <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.youtube.com/@bilota.x" target="_blank"><i class="fab fa-youtube"></i></a>
-        </div>
-    </section>
+    <!-- Main Content Section -->
+    <main>
 
+        <section id="about" class="about_section">
+            <h2>About Us</h2>
+            <p>Bilota is a space where creativity meets innovation. We are committed to building something special just for you.</p>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
