@@ -8,12 +8,9 @@
     <link rel="icon" href="assets/imgs/inaya_pfp.gif">
 
     <!-- Title -->
-    <title>🌴 ・ Bilota</title>
+    <title>🌴 ・ Contact Bilota</title>
 
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="assets/css/style.css">
-
-    <!-- Fonts -->
+    <!-- Fonts and Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous">
     <style>
         /* Global Styles */
@@ -63,24 +60,38 @@
 
         main {
             padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
 
-        section {
-            margin-bottom: 2rem;
-        }
-
-        .intro_section, .about_section, .contact_section {
+        .contact_section {
             background-color: #1e1e1e; /* Box background */
             padding: 2rem;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-            color: #ffffff; /* White text */
+            width: 100%;
+            max-width: 600px;
         }
 
-        .intro_section h1,
-        .about_section h2,
         .contact_section h2 {
             color: #00aaff; /* Accent color for headings */
+            margin-bottom: 1rem;
+        }
+
+        .contact_section p {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact_section a {
+            color: #00aaff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact_section a:hover {
+            text-decoration: underline;
         }
 
         footer {
@@ -88,6 +99,7 @@
             color: #ffffff;
             text-align: center;
             padding: 1rem 0;
+            margin-top: 2rem;
         }
 
         footer a {
@@ -117,11 +129,22 @@
 
     <!-- Main Content Section -->
     <main>
-        <section id="intro" class="intro_section">
-            <h1>updates</h1>
-            <p>We are currently working on shop. Stay tuned!</p>
+        <section id="contact" class="contact_section">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or feedback, feel free to reach out to us via email or through our social media platforms.</p>
+            <p><strong>Email:</strong> <a href="mailto:mayanksinghrawat.ldh@gmail.com">mayanksinghrawat.ldh@gmail.com</a></p>
+            <p><strong>Socials:</strong></p>
+            <p>
+                <a href="https://discord.gg/JuEeGw.eHrb" target="_blank"><i class="fab fa-discord"></i> Discord</a> |
+                <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i> GitHub</a> |
+                <a href="https://www.youtube.com/@bilota.x" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+            </p>
         </section>
-
     </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Bilota. All rights reserved. <a href="index.html">Home</a></p>
+    </footer>
 </body>
 </html>
