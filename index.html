@@ -69,7 +69,7 @@
             margin-bottom: 2rem;
         }
 
-        .intro_section, .about_section, .contact_section {
+        .intro_section, .about_section, .contact_section, .games_section {
             background-color: #1e1e1e; /* Box background */
             padding: 2rem;
             border-radius: 8px;
@@ -79,7 +79,8 @@
 
         .intro_section h1,
         .about_section h2,
-        .contact_section h2 {
+        .contact_section h2,
+        .games_section h2 {
             color: #00aaff; /* Accent color for headings */
         }
 
@@ -96,6 +97,24 @@
         }
 
         footer a:hover {
+            text-decoration: underline;
+        }
+
+        .games_section ul {
+            list-style-type: none; /* Remove default bullets */
+            padding: 0;
+        }
+
+        .games_section li {
+            margin-bottom: 1rem;
+        }
+
+        .games_section a {
+            color: #00aaff; /* Highlight link color */
+            text-decoration: none;
+        }
+
+        .games_section a:hover {
             text-decoration: underline;
         }
     </style>
@@ -124,21 +143,25 @@
         </section>
 
         <section id="games" class="games_section">
-    <h2>Games</h2>
-    <ul>
-        <li><strong><a href="https://agar.io" target="_blank">Agar.io</a></strong> - A multiplayer game where you control a cell and try to become the largest by eating other cells.</li>
-        <li><strong><a href="https://slither.io" target="_blank">Slither.io</a></strong> - Play as a snake and grow longer by eating glowing orbs while avoiding other snakes.</li>
-        <li><strong><a href="https://krunker.io" target="_blank">Krunker.io</a></strong> - A fast-paced first-person shooter game with various maps and modes.</li>
-        <li><strong><a href="https://shellshock.io" target="_blank">Shell Shockers</a></strong> - A fun multiplayer FPS game where you play as an armed egg!</li>
-        <li><strong><a href="https://www.chess.com" target="_blank">Chess.com</a></strong> - Play chess online against other players or AI.</li>
-        <li><strong><a href="https://zombsroyale.io" target="_blank">Zombs Royale</a></strong> - A battle royale game with a top-down view where you can fight for survival.</li>
-        <li><strong><a href="https://tetr.io" target="_blank">Tetr.io</a></strong> - A multiplayer Tetris game where you can compete with others.</li>
-        <li><strong><a href="https://impostor.io" target="_blank">Among Us Online</a></strong> - A browser-based version of the popular deception game, *Among Us*.</li>
-        <li><strong><a href="https://orteil.dashnet.org/cookieclicker" target="_blank">Cookie Clicker</a></strong> - A fun incremental game where you click to bake cookies.</li>
-        <li><strong><a href="https://hole-io.com" target="_blank">Hole.io</a></strong> - Control a black hole and consume objects to grow bigger while competing against others.</li>
-    </ul>
-</section>
+            <h2>Games</h2>
+            <ul>
+                <li><strong><a href="https://agar.io" target="_blank">Agar.io</a></strong> - A multiplayer game where you control a cell and try to become the largest by eating other cells.</li>
+                <li><strong><a href="https://slither.io" target="_blank">Slither.io</a></strong> - Play as a snake and grow longer by eating glowing orbs while avoiding other snakes.</li>
+                <li><strong><a href="https://krunker.io" target="_blank">Krunker.io</a></strong> - A fast-paced first-person shooter game with various maps and modes.</li>
+                <li><strong><a href="https://shellshock.io" target="_blank">Shell Shockers</a></strong> - A fun multiplayer FPS game where you play as an armed egg!</li>
+                <li><strong><a href="https://www.chess.com" target="_blank">Chess.com</a></strong> - Play chess online against other players or AI.</li>
+                <li><strong><a href="https://zombsroyale.io" target="_blank">Zombs Royale</a></strong> - A battle royale game with a top-down view where you can fight for survival.</li>
+                <li><strong><a href="https://tetr.io" target="_blank">Tetr.io</a></strong> - A multiplayer Tetris game where you can compete with others.</li>
+                <li><strong><a href="https://impostor.io" target="_blank">Among Us Online</a></strong> - A browser-based version of the popular deception game, *Among Us*.</li>
+                <li><strong><a href="https://orteil.dashnet.org/cookieclicker" target="_blank">Cookie Clicker</a></strong> - A fun incremental game where you click to bake cookies.</li>
+                <li><strong><a href="https://hole-io.com" target="_blank">Hole.io</a></strong> - Control a black hole and consume objects to grow bigger while competing against others.</li>
+            </ul>
+        </section>
 
     </main>
+
+    <footer>
+        <p>© 2024 Bilota. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
