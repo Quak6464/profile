@@ -26,7 +26,11 @@
             color: #ffffff; /* Light text for contrast */
         }
 
+        /* Sticky Navigation */
         header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
             background-color: #1e1e1e; /* Slightly lighter for distinction */
             padding: 1rem 2rem;
             border-bottom: 2px solid #333;
@@ -40,6 +44,11 @@
 
         .header_logo img {
             max-height: 50px;
+            transition: transform 0.3s ease;
+        }
+
+        .header_logo img:hover {
+            transform: scale(1.1); /* Slight zoom on hover */
         }
 
         .nav_links {
@@ -55,10 +64,12 @@
             color: #ffffff;
             font-weight: bold;
             padding: 0.5rem;
+            transition: color 0.3s ease, transform 0.3s ease;
         }
 
         .nav_links a:hover {
-            color: #00aaff; /* Highlight color */
+            color: #ffcc00; /* Highlight color */
+            transform: scale(1.1); /* Slight zoom effect */
         }
 
         main {
@@ -67,6 +78,21 @@
 
         section {
             margin-bottom: 2rem;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s forwards;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .intro_section, .about_section, .contact_section, .games_section {
@@ -105,11 +131,12 @@
             color: #00aaff; /* Bright blue color for links */
             text-decoration: none;
             font-weight: bold;
+            transition: color 0.3s ease, transform 0.3s ease;
         }
 
         .games_section a:hover {
             color: #ffcc00; /* Bright yellow for hover effect */
-            text-decoration: underline;
+            transform: scale(1.1);
         }
 
         /* Add spacing between links */
@@ -135,7 +162,6 @@
 
     <!-- Main Content Section -->
     <main>
-
         <section id="about" class="about_section">
             <h2>About Us</h2>
             <p>Game Bunk is a space where you can get online free to play games which you can run on your school pc without any issues.</p>
@@ -154,32 +180,22 @@
                 <li><strong><a href="https://skribbl.io" target="_blank">Skribbl.io</a></strong> - A fun multiplayer drawing and guessing game.</li>
                 <li><strong><a href="https://bonk.io" target="_blank">Bonk.io</a></strong> - A physics-based multiplayer platformer game.</li>
                 <li><strong><a href="https://diep.io" target="_blank">Diep.io</a></strong> - Upgrade your tank and battle others in this multiplayer arena game.</li>
-                <li><strong><a href="https://flyordie.io" target="_blank">FlyOrDie.io</a></strong> - Evolve and survive as various flying creatures.</li>
-                <li><strong><a href="https://hole-io.com" target="_blank">Hole.io</a></strong> - Compete to become the largest black hole in the city.</li>
-                <li><strong><a href="https://venge.io" target="_blank">Venge.io</a></strong> - A fast-paced multiplayer FPS game with unique weapons.</li>
-                <li><strong><a href="https://wings.io" target="_blank">Wings.io</a></strong> - Fly planes and shoot down opponents in this aerial multiplayer game.</li>
-                <li><strong><a href="https://pixelwarfare.io" target="_blank">Pixel Warfare</a></strong> - A block-style first-person shooter.</li>
-                <li><strong><a href="https://starblast.io" target="_blank">Starblast.io</a></strong> - A multiplayer space shooter game.</li>
-                <li><strong><a href="https://doodlejump.org" target="_blank">Doodle Jump Online</a></strong> - Play the classic jumping game online.</li>
-                <li><strong><a href="https://sideswipe.rocketleague.com" target="_blank">Rocket League Sideswipe</a></strong> - A 2D version of Rocket League for online play.</li>
-                <li><strong><a href="https://superhex.io" target="_blank">Superhex.io</a></strong> - Capture hexagonal territory in a multiplayer battle.</li>
-                <li><strong><a href="https://tanktrouble.com" target="_blank">Tank Trouble</a></strong> - A simple yet fun multiplayer tank battle game.</li>
             </ul>
         </section>
-
     </main>
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=2d1d3b9879b699caf4a6eafbe4562eff4820c207||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/673e34de4304e3196ae5cce3/1id5ft25j';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
+
+    <!-- Start of Tawk.to Script -->
+    <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function() {
+        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/673e34de4304e3196ae5cce3/1id5ft25j';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
+    </script>
+    <!-- End of Tawk.to Script -->
 </body>
 </html>
