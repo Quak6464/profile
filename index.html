@@ -8,31 +8,27 @@
     <link rel="icon" href="assets/imgs/inaya_pfp.gif">
 
     <!-- Title -->
-    <title>🌴 ・ Bilota Shop</title>
+    <title>🌴 ・ Bilota Home</title>
 
-    <!-- Css -->
-    <link rel="stylesheet" href="assets/css/style.css">
-
-    <!-- Fonts -->
+    <!-- Fonts and CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous">
     <style>
         /* Global Styles */
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f8f9fa; /* Light background for a shop vibe */
-            color: #333; /* Dark text for readability */
+            background-color: #0d1117; /* Dark background for consistency */
+            color: #fff; /* Light text for contrast */
         }
 
         header {
-            background-color: #333; /* Dark header for contrast */
-            color: #fff;
+            background-color: #161b22; /* Slightly lighter header */
             padding: 1rem 2rem;
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid #222;
         }
 
         .header_logo img {
@@ -43,130 +39,67 @@
             list-style: none;
             display: flex;
             gap: 1.5rem;
+            margin: 0;
+            padding: 0;
         }
 
         .nav_links a {
             text-decoration: none;
             color: #fff;
             font-weight: bold;
-            transition: color 0.3s ease;
+            transition: color 0.3s;
         }
 
         .nav_links a:hover {
-            color: #ffcc00; /* Highlight color for links */
+            color: #00aaff; /* Highlight color */
         }
 
-        /* Main Shop Section */
         .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             text-align: center;
-            padding: 2rem;
+            padding: 2rem 1rem;
         }
 
         .main img {
-            max-width: 100%;
-            height: auto;
+            max-width: 150px;
+            border-radius: 50%;
             margin-bottom: 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
         .main span {
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: bold;
-            color: #ff5733; /* Accent color for the shop name */
-        }
-
-        .main p {
-            margin: 1rem 0;
-            color: #555;
-        }
-
-        .main ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .main ul li a {
-            font-size: 1.5rem;
-            color: #333;
-            transition: color 0.3s ease;
-        }
-
-        .main ul li a:hover {
-            color: #ff5733;
-        }
-
-        /* Shop Items */
-        .shop_items {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            justify-content: center;
-            margin-top: 2rem;
-        }
-
-        .shop_item {
-            background-color: #fff;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            width: 300px;
-        }
-
-        .shop_item img {
-            max-width: 100%;
-            border-radius: 8px;
-        }
-
-        .shop_item h3 {
-            font-size: 1.5rem;
-            margin: 1rem 0 0.5rem;
-            color: #333;
-        }
-
-        .shop_item p {
-            font-size: 1rem;
-            color: #666;
+            color: #00aaff;
             margin-bottom: 1rem;
         }
 
-        .shop_item a {
-            text-decoration: none;
-            background-color: #ff5733;
-            color: #fff;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
+        .main p {
             font-size: 1rem;
-            transition: background-color 0.3s ease;
+            margin-bottom: 2rem;
         }
 
-        .shop_item a:hover {
-            background-color: #ffcc00;
+        .social_links {
+            display: flex;
+            gap: 1.5rem;
         }
 
-        /* Footer */
-        footer {
-            background-color: #333;
+        .social_links a {
             color: #fff;
-            text-align: center;
-            padding: 1rem 0;
-            margin-top: 2rem;
+            font-size: 1.5rem;
+            transition: color 0.3s;
         }
 
-        footer a {
-            color: #ffcc00;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
+        .social_links a:hover {
+            color: #00aaff;
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
+
+    <!-- Header Section -->
     <header>
         <div class="header_logo">
             <img src="assets/imgs/bilota.png" alt="Bilota Logo">
@@ -174,47 +107,22 @@
         <ul class="nav_links">
             <li><a href="index.html">Home</a></li>
             <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </header>
 
-    <!-- Main Shop Section -->
+    <!-- Main Content -->
     <section class="main">
-        <img src="assets/imgs/bilota.png" alt="Shop Logo">
-        <span>Bilota Shop</span>
-        <p>Your one-stop shop for exclusive products!</p>
-        <ul>
-            <li><a target="_blank" href="https://discord.gg/JuEeGw. eHrb"><i class="fab fa-discord"></i></a></li>
-            <li><a target="_blank" href="https://github.com/"><i class="fab fa-github"></i></a></li>
-            <li><a target="_blank" href="https://www.youtube.com/@bilota.x"><i class="fab fa-youtube"></i></a></li>
-        </ul>
-
-        <!-- Shop Items -->
-        <div class="shop_items">
-            <div class="shop_item">
-                <img src="assets/imgs/product1.jpg" alt="Product 1">
-                <h3>Product 1</h3>
-                <p>Amazing product for all your needs.</p>
-                <a href="#">Buy Now</a>
-            </div>
-            <div class="shop_item">
-                <img src="assets/imgs/product2.jpg" alt="Product 2">
-                <h3>Product 2</h3>
-                <p>Quality and style combined in one.</p>
-                <a href="#">Buy Now</a>
-            </div>
-            <div class="shop_item">
-                <img src="assets/imgs/product3.jpg" alt="Product 3">
-                <h3>Product 3</h3>
-                <p>Experience the best with this product.</p>
-                <a href="#">Buy Now</a>
-            </div>
+        <img src="assets/imgs/bilota.png" alt="Bilota Logo">
+        <span>Welcome to Bilota</span>
+        <p>Your one-stop destination for creativity and innovation. Dive into our world and discover something amazing!</p>
+        <div class="social_links">
+            <a href="https://discord.gg/JuEeGw.eHrb" target="_blank"><i class="fab fa-discord"></i></a>
+            <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.youtube.com/@bilota.x" target="_blank"><i class="fab fa-youtube"></i></a>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Bilota Shop. All rights reserved. | <a href="mailto:mayanksinghrawat.ldh@gmail.com">Contact Us</a></p>
-    </footer>
 </body>
 </html>
