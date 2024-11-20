@@ -15,11 +15,92 @@
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous">
+    <style>
+        /* Inline Styles for Spacing and Structure */
+
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #f4f4f4;
+            padding: 1rem 2rem;
+            border-bottom: 2px solid #ddd;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header_logo img {
+            max-height: 50px;
+        }
+
+        .nav_links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav_links li {
+            display: inline;
+        }
+
+        .nav_links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 0.5rem;
+        }
+
+        .nav_links a:hover {
+            color: #007bff;
+        }
+
+        main {
+            padding: 2rem;
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        .intro_section, .about_section, .contact_section {
+            background-color: #f9f9f9;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <!-- Header Section -->
     <header>
-        <nav class="navbar">
+        <nav>
             <div class="header_logo">
                 <img src="assets/imgs/bilota.png" alt="Bilota Logo">
             </div>
@@ -45,13 +126,13 @@
 
         <section id="contact" class="contact_section">
             <h2>Contact Us</h2>
-            <p>Have questions or feedback? Reach out at <a href="mailto:support@bilota.com">support@bilota.com</a>.</p>
+            <p>Have questions or feedback? Reach out at <a href="mailto:mayanksinghrawat.ldh@gmail.com">mayanksinghrawat.ldh@gmail.com</a>.</p>
         </section>
     </main>
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 Bilota. All rights reserved.</p>
+        <p>&copy; 2024 Bilota. All rights reserved. | <a href="mailto:mayanksinghrawat.ldh@gmail.com">Contact Us</a></p>
     </footer>
 
     <!-- JavaScript -->
