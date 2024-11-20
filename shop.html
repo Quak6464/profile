@@ -16,20 +16,20 @@
     <!-- Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous">
     <style>
-        /* Inline Styles for Spacing and Structure */
-
         /* Global Styles */
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
+            background-color: #121212; /* Dark background */
+            color: #ffffff; /* Light text for contrast */
         }
 
         header {
-            background-color: #f4f4f4;
+            background-color: #1e1e1e; /* Slightly lighter for distinction */
             padding: 1rem 2rem;
-            border-bottom: 2px solid #ddd;
+            border-bottom: 2px solid #333;
         }
 
         nav {
@@ -50,19 +50,15 @@
             gap: 1.5rem;
         }
 
-        .nav_links li {
-            display: inline;
-        }
-
         .nav_links a {
             text-decoration: none;
-            color: #333;
+            color: #ffffff;
             font-weight: bold;
             padding: 0.5rem;
         }
 
         .nav_links a:hover {
-            color: #007bff;
+            color: #00aaff; /* Highlight color */
         }
 
         main {
@@ -74,21 +70,28 @@
         }
 
         .intro_section, .about_section, .contact_section {
-            background-color: #f9f9f9;
+            background-color: #1e1e1e; /* Box background */
             padding: 2rem;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            color: #ffffff; /* White text */
+        }
+
+        .intro_section h1,
+        .about_section h2,
+        .contact_section h2 {
+            color: #00aaff; /* Accent color for headings */
         }
 
         footer {
-            background-color: #333;
-            color: #fff;
+            background-color: #1e1e1e;
+            color: #ffffff;
             text-align: center;
             padding: 1rem 0;
         }
 
         footer a {
-            color: #007bff;
+            color: #00aaff;
             text-decoration: none;
         }
 
