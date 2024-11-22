@@ -35,20 +35,18 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
+            gap: 2rem;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow for better visibility */
         }
 
         .header_logo img {
             max-height: 50px;
-            margin-bottom: 1rem;
         }
 
         .nav_links {
             list-style: none;
             display: flex;
             gap: 1.5rem;
-            margin-bottom: 1rem;
         }
 
         .nav_links a {
@@ -64,41 +62,11 @@
             transform: scale(1.1);
         }
 
-        /* Sticky Hotbar */
-        .hotbar {
-            position: sticky;
-            top: 60px; /* Position the hotbar below the main navigation */
-            z-index: 999;
-            background-color: #0a0a1a;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            gap: 1rem;
-            border-bottom: 2px solid #333;
-            flex-wrap: wrap;
-        }
-
-        .hotbar button {
-            background-color: #00ccff;
-            border: none;
-            padding: 0.5rem 1rem;
-            color: white;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-
-        .hotbar button:hover {
-            background-color: #0099b3;
-            transform: scale(1.05);
-        }
-
         /* Search Bar */
         .search_bar {
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            width: 100%;
         }
 
         .search_bar input {
@@ -226,10 +194,15 @@
                 width: 200px; /* Adjust search bar width on mobile */
             }
 
-            /* Sticky hotbar for small screens */
-            .hotbar {
-                flex-direction: column;
-                align-items: center;
+            /* Mobile layout for search bar */
+            .header_logo {
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+
+            .search_bar {
+                justify-content: center;
+                margin-bottom: 1rem;
             }
 
             .nav_links {
@@ -241,16 +214,6 @@
                 display: inline-block;
                 margin: 0.5rem;
                 font-size: 1.2rem;
-            }
-
-            .header_logo {
-                text-align: center;
-                margin-bottom: 1rem;
-            }
-
-            .search_bar {
-                justify-content: center;
-                margin-bottom: 1rem;
             }
         }
     </style>
@@ -266,15 +229,11 @@
             <li><a href="shop.html">Shop</a></li>
             <li><a href="contacts.html">Contacts</a></li>
         </ul>
-    </header>
-
-    <!-- Hotbar Section -->
-    <div class="hotbar">
         <div class="search_bar">
             <input type="text" id="searchInput" placeholder="Search games...">
             <button onclick="searchFunction()">Search</button>
         </div>
-    </div>
+    </header>
 
     <!-- Main Content Section -->
     <main>
