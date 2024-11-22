@@ -35,20 +35,16 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow for better visibility */
         }
 
         .header_logo img {
             max-height: 50px;
-            margin-bottom: 1rem;
         }
 
         .nav_links {
             list-style: none;
             display: flex;
             gap: 1.5rem;
-            margin-bottom: 1rem;
         }
 
         .nav_links a {
@@ -62,68 +58,6 @@
         .nav_links a:hover {
             color: #00ffcc; /* Vibrant hover color */
             transform: scale(1.1);
-        }
-
-        /* Sticky Hotbar */
-        .hotbar {
-            position: sticky;
-            top: 60px; /* Position the hotbar below the main navigation */
-            z-index: 999;
-            background-color: #0a0a1a;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            gap: 1rem;
-            border-bottom: 2px solid #333;
-            flex-wrap: wrap;
-        }
-
-        .hotbar button {
-            background-color: #00ccff;
-            border: none;
-            padding: 0.5rem 1rem;
-            color: white;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-
-        .hotbar button:hover {
-            background-color: #0099b3;
-            transform: scale(1.05);
-        }
-
-        /* Search Bar */
-        .search_bar {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            width: 100%;
-        }
-
-        .search_bar input {
-            padding: 0.5rem;
-            font-size: 1rem;
-            border: 1px solid #333;
-            border-radius: 4px;
-            background-color: #2a2a3f;
-            color: white;
-            width: 250px;
-        }
-
-        .search_bar button {
-            background-color: #00ccff;
-            border: none;
-            padding: 0.5rem 1rem;
-            color: white;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-
-        .search_bar button:hover {
-            background-color: #0099b3;
-            transform: scale(1.05);
         }
 
         main {
@@ -151,7 +85,7 @@
         /* Games Section Grid */
         .games_section {
             display: grid;
-            grid-template-columns: repeat(4, 1fr); /* Four games per row on desktop */
+            grid-template-columns: repeat(2, 1fr); /* Two games per row */
             gap: 1.5rem;
             grid-template-rows: auto;
         }
@@ -167,7 +101,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             height: 300px; /* Set height to make it square */
-            width: 250px; /* Set width to make it square */
+            width: 300px; /* Set width to make it square */
         }
 
         .game_card:hover {
@@ -221,37 +155,6 @@
                 height: 250px; /* Adjust the card height for mobile */
                 width: 100%; /* Make cards take up full width */
             }
-
-            .search_bar input {
-                width: 200px; /* Adjust search bar width on mobile */
-            }
-
-            /* Sticky hotbar for small screens */
-            .hotbar {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .nav_links {
-                display: block; /* Show navigation links on mobile */
-                text-align: center;
-            }
-
-            .nav_links a {
-                display: inline-block;
-                margin: 0.5rem;
-                font-size: 1.2rem;
-            }
-
-            .header_logo {
-                text-align: center;
-                margin-bottom: 1rem;
-            }
-
-            .search_bar {
-                justify-content: center;
-                margin-bottom: 1rem;
-            }
         }
     </style>
 </head>
@@ -261,48 +164,151 @@
         <div class="header_logo">
             <img src="assets/imgs/bilota.png" alt="Bilota Logo">
         </div>
-       <ul class="nav_links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="contacts.html">Contacts</a></li>
-            </ul>
+        <ul class="nav_links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="contacts.html">Contacts</a></li>
+        </ul>
     </header>
-
-    <!-- Hotbar Section -->
-    <div class="hotbar">
-        <div class="search_bar">
-            <input type="text" id="searchInput" placeholder="Search games...">
-            <button onclick="searchFunction()">Search</button>
-        </div>
-    </div>
 
     <!-- Main Content Section -->
     <main>
         <section id="about" class="about_section">
             <h2>About Us</h2>
-            <p>Game Bunk is a space where you can get online free-to-play games that you can run on your school PC without any issues. Enjoy the fun!</p>
+            <p>Game Bunk is a space where you can get online free-to-play games that you can run on your school PC without any issues.</p>
         </section>
 
-        <section id="games" class="games_section">
-            <h2>Popular Games</h2>
-            <div class="games_list">
-                <div class="game_card"><img src="assets/imgs/game1.png" alt="Game 1"><a href="#">Game 1</a></div>
-                <div class="game_card"><img src="assets/imgs/game2.png" alt="Game 2"><a href="#">Game 2</a></div>
-                <!-- Additional game cards here -->
+        <section id="games">
+            <h2>Games</h2>
+            <div class="games_section">
+                <!-- Game 1 -->
+                <div class="game_card">
+                    <img src="assets/imgs/1v1lol.jpg" alt="1v1.LOL">
+                    <strong><a href="https://1v1.lol" target="_blank">1v1.LOL</a></strong>
+                    <p>A battle royale and building game similar to Fortnite.</p>
+                </div>
+                <!-- Game 2 -->
+                <div class="game_card">
+                    <img src="assets/imgs/paperio.jpg" alt="Paper.io 2">
+                    <strong><a href="https://paper-io.com" target="_blank">Paper.io 2</a></strong>
+                    <p>Conquer the most territory by drawing lines on the map.</p>
+                </div>
+                <!-- Game 3 -->
+                <div class="game_card">
+                    <img src="assets/imgs/survivio.jpg" alt="Surviv.io">
+                    <strong><a href="https://surviv.io" target="_blank">Surviv.io</a></strong>
+                    <p>A 2D battle royale game.</p>
+                </div>
+                <!-- Game 4 -->
+                <div class="game_card">
+                    <img src="assets/imgs/haxball.jpg" alt="HaxBall">
+                    <strong><a href="https://haxball.com" target="_blank">HaxBall</a></strong>
+                    <p>A fun multiplayer soccer game.</p>
+                </div>
+                <!-- Game 5 -->
+                <div class="game_card">
+                    <img src="assets/imgs/wormszone.jpg" alt="Worms Zone">
+                    <strong><a href="https://wormszone.com" target="_blank">Worms Zone</a></strong>
+                    <p>A colorful multiplayer snake game.</p>
+                </div>
+                <!-- Game 6 -->
+                <div class="game_card">
+                    <img src="assets/imgs/miniroyale.jpg" alt="MiniRoyale.io">
+                    <strong><a href="https://miniroyale.io" target="_blank">MiniRoyale.io</a></strong>
+                    <p>A fast-paced FPS battle royale game.</p>
+                </div>
+                <!-- Game 7 -->
+                <div class="game_card">
+                    <img src="assets/imgs/mopeio.jpg" alt="Mope.io">
+                    <strong><a href="https://mope.io" target="_blank">Mope.io</a></strong>
+                    <p>Survive and evolve as different animals in a multiplayer world.</p>
+                </div>
+                <!-- Game 8 -->
+                <div class="game_card">
+                    <img src="assets/imgs/skribblio.jpg" alt="Skribbl.io">
+                    <strong><a href="https://skribbl.io" target="_blank">Skribbl.io</a></strong>
+                    <p>A fun multiplayer drawing and guessing game.</p>
+                </div>
+                <!-- Game 9 -->
+                <div class="game_card">
+                    <img src="assets/imgs/denjex.jpg" alt="Denjex">
+                    <strong><a href="https://denjex.com" target="_blank">Denjex</a></strong>
+                    <p>A competitive multiplayer online game.</p>
+                </div>
+                <!-- Game 10 -->
+                <div class="game_card">
+                    <img src="assets/imgs/diepio.jpg" alt="Diep.io">
+                    <strong><a href="https://diep.io" target="_blank">Diep.io</a></strong>
+                    <p>Upgrade your tank and battle others in this multiplayer arena game.</p>
+                </div>
+                <!-- Game 11 -->
+                <div class="game_card">
+                    <img src="assets/imgs/flyordieio.jpg" alt="FlyOrDie.io">
+                    <strong><a href="https://flyordie.io" target="_blank">FlyOrDie.io</a></strong>
+                    <p>Evolve and survive as various flying creatures.</p>
+                </div>
+                <!-- Game 12 -->
+                <div class="game_card">
+                    <img src="assets/imgs/holeio.jpg" alt="Hole.io">
+                    <strong><a href="https://hole-io.com" target="_blank">Hole.io</a></strong>
+                    <p>Compete to become the largest black hole in the city.</p>
+                </div>
+                <!-- Game 13 -->
+                <div class="game_card">
+                    <img src="assets/imgs/agar.io.jpg" alt="Agar.io">
+                    <strong><a href="https://agar.io" target="_blank">Agar.io</a></strong>
+                    <p>Consume others to grow bigger in this cell-eating game.</p>
+                </div>
+                <!-- Game 14 -->
+                <div class="game_card">
+                    <img src="assets/imgs/slitherio.jpg" alt="Slither.io">
+                    <strong><a href="https://slither.io" target="_blank">Slither.io</a></strong>
+                    <p>A snake game where you grow by eating pellets.</p>
+                </div>
+                <!-- Game 15 -->
+                <div class="game_card">
+                    <img src="assets/imgs/zimpli.jpg" alt="Zimplify.io">
+                    <strong><a href="https://zimplify.io" target="_blank">Zimplify.io</a></strong>
+                    <p>A creative multiplayer survival game.</p>
+                </div>
+                <!-- Game 16 -->
+                <div class="game_card">
+                    <img src="assets/imgs/tntrun.jpg" alt="TNT Run">
+                    <strong><a href="https://tntrun.io" target="_blank">TNT Run</a></strong>
+                    <p>Run and avoid falling in this fast-paced game.</p>
+                </div>
+                <!-- Game 17 -->
+                <div class="game_card">
+                    <img src="assets/imgs/brickbreaker.jpg" alt="Brick Breaker">
+                    <strong><a href="https://brickbreaker.io" target="_blank">Brick Breaker</a></strong>
+                    <p>Destroy the blocks using a ball and paddle.</p>
+                </div>
+                <!-- Game 18 -->
+                <div class="game_card">
+                    <img src="assets/imgs/racing.jpg" alt="Racing Game">
+                    <strong><a href="https://racing.io" target="_blank">Racing Game</a></strong>
+                    <p>Speed through courses in this fun racing game.</p>
+                </div>
+                <!-- Game 19 -->
+                <div class="game_card">
+                    <img src="assets/imgs/battlefield.jpg" alt="Battlefield.io">
+                    <strong><a href="https://battlefield.io" target="_blank">Battlefield.io</a></strong>
+                    <p>Battle in massive multiplayer wars.</p>
+                </div>
+                <!-- Game 20 -->
+                <div class="game_card">
+                    <img src="assets/imgs/swordfighting.jpg" alt="Sword Fighting">
+                    <strong><a href="https://swordfight.io" target="_blank">Sword Fighting</a></strong>
+                    <p>Defend and attack in a medieval sword combat game.</p>
+                </div>
             </div>
         </section>
     </main>
 
     <!-- Footer Section -->
     <footer>
-        <p>© 2024 Bilota. All Rights Reserved.</p>
+        <p>&copy; 2024 Bilota. All rights reserved.</p>
+        <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a>
     </footer>
-
-    <script>
-        function searchFunction() {
-            let query = document.getElementById('searchInput').value.toLowerCase();
-            alert('Search initiated for: ' + query); // Placeholder for search logic
-        }
-    </script>
 </body>
 </html>
