@@ -91,14 +91,16 @@
 
         .game_card {
             background-color: #2a2a3f; /* Distinct background for cards */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
             padding: 1rem;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            height: 300px; /* Set height to make it square */
+            width: 300px; /* Set width to make it square */
         }
 
         .game_card:hover {
@@ -108,10 +110,9 @@
 
         .game_card img {
             max-width: 100%;
+            height: 150px; /* Set height for image */
+            object-fit: cover; /* Make the image fit well */
             border-radius: 8px;
-            margin-bottom: 1rem;
-            height: 200px;
-            object-fit: cover;
         }
 
         .game_card a {
@@ -238,7 +239,54 @@
                     <strong><a href="https://hole-io.com" target="_blank">Hole.io</a></strong>
                     <p>Compete to become the largest black hole in the city.</p>
                 </div>
-                <!-- Add more games similarly... -->
+                <!-- Game 13 -->
+                <div class="game_card">
+                    <img src="assets/imgs/agar.io.jpg" alt="Agar.io">
+                    <strong><a href="https://agar.io" target="_blank">Agar.io</a></strong>
+                    <p>Consume others to grow bigger in this cell-eating game.</p>
+                </div>
+                <!-- Game 14 -->
+                <div class="game_card">
+                    <img src="assets/imgs/slitherio.jpg" alt="Slither.io">
+                    <strong><a href="https://slither.io" target="_blank">Slither.io</a></strong>
+                    <p>A snake game where you grow by eating pellets.</p>
+                </div>
+                <!-- Game 15 -->
+                <div class="game_card">
+                    <img src="assets/imgs/zimpli.jpg" alt="Zimplify.io">
+                    <strong><a href="https://zimplify.io" target="_blank">Zimplify.io</a></strong>
+                    <p>A creative multiplayer survival game.</p>
+                </div>
+                <!-- Game 16 -->
+                <div class="game_card">
+                    <img src="assets/imgs/tntrun.jpg" alt="TNT Run">
+                    <strong><a href="https://tntrun.io" target="_blank">TNT Run</a></strong>
+                    <p>Run and avoid falling in this fast-paced game.</p>
+                </div>
+                <!-- Game 17 -->
+                <div class="game_card">
+                    <img src="assets/imgs/brickbreaker.jpg" alt="Brick Breaker">
+                    <strong><a href="https://brickbreaker.io" target="_blank">Brick Breaker</a></strong>
+                    <p>Destroy the blocks using a ball and paddle.</p>
+                </div>
+                <!-- Game 18 -->
+                <div class="game_card">
+                    <img src="assets/imgs/racing.jpg" alt="Racing Game">
+                    <strong><a href="https://racing.io" target="_blank">Racing Game</a></strong>
+                    <p>Speed through courses in this fun racing game.</p>
+                </div>
+                <!-- Game 19 -->
+                <div class="game_card">
+                    <img src="assets/imgs/battlefield.jpg" alt="Battlefield.io">
+                    <strong><a href="https://battlefield.io" target="_blank">Battlefield.io</a></strong>
+                    <p>Battle in massive multiplayer wars.</p>
+                </div>
+                <!-- Game 20 -->
+                <div class="game_card">
+                    <img src="assets/imgs/swordfighting.jpg" alt="Sword Fighting">
+                    <strong><a href="https://swordfight.io" target="_blank">Sword Fighting</a></strong>
+                    <p>Defend and attack in a medieval sword combat game.</p>
+                </div>
             </div>
         </section>
     </main>
