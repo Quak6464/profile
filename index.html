@@ -85,7 +85,7 @@
         /* Games Section Grid */
         .games_section {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* Two games per row */
+            grid-template-columns: repeat(3, 1fr); /* Three games per row on large screens */
             gap: 1.5rem;
             grid-template-rows: auto;
             justify-items: center; /* Horizontally center the items */
@@ -158,6 +158,34 @@
                 height: 250px; /* Adjust the card height for mobile */
                 width: 100%; /* Make cards take up full width */
             }
+
+            section {
+                padding: 1rem; /* Reduce padding for mobile */
+            }
+
+            header {
+                padding: 1rem; /* Reduce header padding */
+            }
+
+            .nav_links {
+                flex-direction: column; /* Stack nav links vertically */
+                gap: 1rem;
+            }
+
+            .header_logo img {
+                max-height: 40px; /* Smaller logo for mobile */
+            }
+        }
+
+        /* Extra Small Devices (Mobile Portrait) */
+        @media (max-width: 480px) {
+            .game_card img {
+                height: 120px; /* Adjust image size for very small screens */
+            }
+
+            .game_card {
+                height: 200px; /* Further reduce card height */
+            }
         }
     </style>
 </head>
@@ -218,25 +246,7 @@
                 <div class="game_card">
                     <img src="assets/imgs/miniroyale.jpg" alt="MiniRoyale.io">
                     <strong><a href="https://miniroyale.io" target="_blank">MiniRoyale.io</a></strong>
-                    <p>A fast-paced FPS battle royale game.</p>
-                </div>
-                <!-- Game 7 -->
-                <div class="game_card">
-                    <img src="assets/imgs/mopeio.jpg" alt="Mope.io">
-                    <strong><a href="https://mope.io" target="_blank">Mope.io</a></strong>
-                    <p>Survive and evolve as different animals in a multiplayer world.</p>
-                </div>
-                <!-- Game 8 -->
-                <div class="game_card">
-                    <img src="assets/imgs/skribblio.jpg" alt="Skribbl.io">
-                    <strong><a href="https://skribbl.io" target="_blank">Skribbl.io</a></strong>
-                    <p>A fun multiplayer drawing and guessing game.</p>
-                </div>
-                <!-- Game 9 -->
-                <div class="game_card">
-                    <img src="assets/imgs/denjex.jpg" alt="Denjex.io">
-                    <strong><a href="https://denjex.io" target="_blank">Denjex.io</a></strong>
-                    <p>Destroy other players and grow your own blob!</p>
+                    <p>A multiplayer battle royale in a mini style.</p>
                 </div>
             </div>
         </section>
