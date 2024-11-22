@@ -10,19 +10,17 @@
     <!-- Title -->
     <title>🌴 ・ Bilota</title>
 
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="assets/css/style.css">
-
     <!-- Fonts -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
     <style>
         /* Global Styles */
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Oxanium', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #121212; /* Dark background */
+            background-color: #0a0a1a; /* Dark gaming background */
             color: #ffffff; /* Light text for contrast */
         }
 
@@ -31,30 +29,20 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            background-color: #1e1e1e; /* Slightly lighter for distinction */
+            background-color: #121212; /* Darker navigation bar */
             padding: 1rem 2rem;
             border-bottom: 2px solid #333;
-        }
-
-        nav {
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: center;
         }
 
         .header_logo img {
             max-height: 50px;
-            transition: transform 0.3s ease;
-        }
-
-        .header_logo img:hover {
-            transform: scale(1.1); /* Slight zoom on hover */
         }
 
         .nav_links {
             list-style: none;
-            padding: 0;
-            margin: 0;
             display: flex;
             gap: 1.5rem;
         }
@@ -64,12 +52,12 @@
             color: #ffffff;
             font-weight: bold;
             padding: 0.5rem;
-            transition: color 0.3s ease, transform 0.3s ease;
+            transition: color 0.3s, transform 0.3s;
         }
 
         .nav_links a:hover {
-            color: #ffcc00; /* Highlight color */
-            transform: scale(1.1); /* Slight zoom effect */
+            color: #00ffcc; /* Vibrant hover color */
+            transform: scale(1.1);
         }
 
         main {
@@ -78,40 +66,37 @@
 
         section {
             margin-bottom: 2rem;
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInUp 1s forwards;
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .intro_section, .about_section, .contact_section, .games_section {
-            background-color: #1e1e1e; /* Box background */
+            background-color: #1e1e2f; /* Slightly lighter for sections */
             padding: 2rem;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-            color: #ffffff; /* White text */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .intro_section h1,
-        .about_section h2,
-        .contact_section h2,
-        .games_section h2 {
-            color: #00aaff; /* Accent color for headings */
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 255, 204, 0.5);
+        }
+
+        section h2 {
+            color: #00ccff; /* Bright section headings */
+        }
+
+        /* Games Section Links */
+        .games_section a {
+            color: #00ffcc; /* Bright blue for game links */
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .games_section a:hover {
+            color: #ffcc00; /* Bright yellow on hover */
+            transform: scale(1.05);
         }
 
         footer {
-            background-color: #1e1e1e;
+            background-color: #121212;
             color: #ffffff;
             text-align: center;
             padding: 1rem 0;
@@ -125,39 +110,19 @@
         footer a:hover {
             text-decoration: underline;
         }
-
-        /* Bright link styles for games section */
-        .games_section a {
-            color: #00aaff; /* Bright blue color for links */
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease, transform 0.3s ease;
-        }
-
-        .games_section a:hover {
-            color: #ffcc00; /* Bright yellow for hover effect */
-            transform: scale(1.1);
-        }
-
-        /* Add spacing between links */
-        .games_section ul li {
-            margin-bottom: 10px; /* Adds space between each link */
-        }
     </style>
 </head>
 <body>
     <!-- Header Section -->
     <header>
-        <nav>
-            <div class="header_logo">
-                <img src="assets/imgs/bilota.png" alt="Bilota Logo">
-            </div>
-            <ul class="nav_links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="contacts.html">Contacts</a></li>
-            </ul>
-        </nav>
+        <div class="header_logo">
+            <img src="assets/imgs/bilota.png" alt="Bilota Logo">
+        </div>
+        <ul class="nav_links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="contacts.html">Contacts</a></li>
+        </ul>
     </header>
 
     <!-- Main Content Section -->
@@ -194,18 +159,17 @@
         </section>
     </main>
 
-    <!-- Start of Tawk.to Script -->
+    <!-- Tawk.to Script -->
     <script type="text/javascript">
-    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-    (function() {
-        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-        s1.async = true;
-        s1.src = 'https://embed.tawk.to/673e34de4304e3196ae5cce3/1id5ft25j';
-        s1.charset = 'UTF-8';
-        s1.setAttribute('crossorigin', '*');
-        s0.parentNode.insertBefore(s1, s0);
-    })();
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function() {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/673e34de4304e3196ae5cce3/1id5ft25j';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
     </script>
-    <!-- End of Tawk.to Script -->
 </body>
 </html>
