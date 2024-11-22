@@ -35,16 +35,19 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
         }
 
         .header_logo img {
             max-height: 50px;
+            margin-bottom: 1rem;
         }
 
         .nav_links {
             list-style: none;
             display: flex;
             gap: 1.5rem;
+            margin-bottom: 1rem;
         }
 
         .nav_links a {
@@ -68,9 +71,10 @@
             background-color: #0a0a1a;
             padding: 1rem 2rem;
             display: flex;
-            justify-content: flex-start;
+            justify-content: space-between;
             gap: 1rem;
             border-bottom: 2px solid #333;
+            flex-wrap: wrap;
         }
 
         .hotbar button {
@@ -93,6 +97,7 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            width: 100%;
         }
 
         .search_bar input {
@@ -234,6 +239,11 @@
                 text-align: center;
                 margin-bottom: 1rem;
             }
+
+            .search_bar {
+                justify-content: center;
+                margin-bottom: 1rem;
+            }
         }
     </style>
 </head>
@@ -251,6 +261,7 @@
     </header>
 
     <!-- Hotbar Section -->
+    <div class="hotbar">
         <div class="search_bar">
             <input type="text" id="searchInput" placeholder="Search games...">
             <button onclick="searchFunction()">Search</button>
@@ -294,11 +305,12 @@
 
     <!-- Footer Section -->
     <footer>
-    <script>
-        function searchFunction() {
-            let query = document.getElementById('searchInput').value.toLowerCase();
-            alert('Search initiated for: ' + query); // Placeholder for search logic
-        }
-    </script>
+        <script>
+            function searchFunction() {
+                let query = document.getElementById('searchInput').value.toLowerCase();
+                alert('Search initiated for: ' + query); // Placeholder for search logic
+            }
+        </script>
+    </footer>
 </body>
 </html>
