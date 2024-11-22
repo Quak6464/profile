@@ -85,7 +85,7 @@
         /* Games Section Grid */
         .games_section {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* Two games per row */
+            grid-template-columns: repeat(4, 1fr); /* Four games per row */
             gap: 1.5rem;
             justify-items: center; /* Centers game cards in the grid */
         }
@@ -145,6 +145,13 @@
         }
 
         /* Mobile Responsiveness */
+        @media (max-width: 1024px) {
+            /* On medium screens, change to three-column layout */
+            .games_section {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
         @media (max-width: 768px) {
             /* On small screens, change to a single-column layout */
             .games_section {
@@ -231,9 +238,75 @@
                 </div>
                 <!-- Game 9 -->
                 <div class="game_card">
-                    <img src="assets/imgs/denjex.jpg" alt="Denjex">
-                    <strong><a href="https://denjex.com" target="_blank">Denjex</a></strong>
-                    <p>A fun and fast-paced shooting game.</p>
+                    <img src="assets/imgs/slitherio.jpg" alt="Slither.io">
+                    <strong><a href="https://slither.io" target="_blank">Slither.io</a></strong>
+                    <p>Grow your snake and outsmart other players.</p>
+                </div>
+                <!-- Game 10 -->
+                <div class="game_card">
+                    <img src="assets/imgs/agario.jpg" alt="Agar.io">
+                    <strong><a href="https://agar.io" target="_blank">Agar.io</a></strong>
+                    <p>A popular multiplayer cell-eating game.</p>
+                </div>
+                <!-- Game 11 -->
+                <div class="game_card">
+                    <img src="assets/imgs/krunker.jpg" alt="Krunker.io">
+                    <strong><a href="https://krunker.io" target="_blank">Krunker.io</a></strong>
+                    <p>A fast-paced FPS with customizable settings.</p>
+                </div>
+                <!-- Game 12 -->
+                <div class="game_card">
+                    <img src="assets/imgs/deeeepio.jpg" alt="Deeeep.io">
+                    <strong><a href="https://deeeep.io" target="_blank">Deeeep.io</a></strong>
+                    <p>Explore the ocean as an animal, survive, and evolve.</p>
+                </div>
+                <!-- Game 13 -->
+                <div class="game_card">
+                    <img src="assets/imgs/drawasaurus.jpg" alt="Drawasaurus">
+                    <strong><a href="https://drawasaurus.org" target="_blank">Drawasaurus</a></strong>
+                    <p>Draw and guess the drawings of other players.</p>
+                </div>
+                <!-- Game 14 -->
+                <div class="game_card">
+                    <img src="assets/imgs/tubeframe.jpg" alt="Tubeframe.io">
+                    <strong><a href="https://tubeframe.io" target="_blank">Tubeframe.io</a></strong>
+                    <p>Build your own tube and compete against others.</p>
+                </div>
+                <!-- Game 15 -->
+                <div class="game_card">
+                    <img src="assets/imgs/zombsroyale.jpg" alt="ZombsRoyale.io">
+                    <strong><a href="https://zombsroyale.io" target="_blank">ZombsRoyale.io</a></strong>
+                    <p>A 2D battle royale game with building and survival elements.</p>
+                </div>
+                <!-- Game 16 -->
+                <div class="game_card">
+                    <img src="assets/imgs/bonkio.jpg" alt="Bonk.io">
+                    <strong><a href="https://bonk.io" target="_blank">Bonk.io</a></strong>
+                    <p>A multiplayer physics-based game.</p>
+                </div>
+                <!-- Game 17 -->
+                <div class="game_card">
+                    <img src="assets/imgs/airwars.jpg" alt="AirWars.io">
+                    <strong><a href="https://airwars.io" target="_blank">AirWars.io</a></strong>
+                    <p>A multiplayer aerial combat game.</p>
+                </div>
+                <!-- Game 18 -->
+                <div class="game_card">
+                    <img src="assets/imgs/squidgame.jpg" alt="Squid Game">
+                    <strong><a href="https://squidgame.io" target="_blank">Squid Game</a></strong>
+                    <p>Challenge yourself with Squid Game-themed challenges.</p>
+                </div>
+                <!-- Game 19 -->
+                <div class="game_card">
+                    <img src="assets/imgs/roblox.jpg" alt="Roblox">
+                    <strong><a href="https://roblox.com" target="_blank">Roblox</a></strong>
+                    <p>A platform to create and play games created by others.</p>
+                </div>
+                <!-- Game 20 -->
+                <div class="game_card">
+                    <img src="assets/imgs/fortnite.jpg" alt="Fortnite">
+                    <strong><a href="https://fortnite.com" target="_blank">Fortnite</a></strong>
+                    <p>Battle royale game with building and survival mechanics.</p>
                 </div>
             </div>
         </section>
