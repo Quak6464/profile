@@ -36,6 +36,7 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow for better visibility */
         }
 
         .header_logo img {
@@ -232,7 +233,14 @@
             }
 
             .nav_links {
-                display: none; /* Hide nav links on mobile */
+                display: block; /* Show navigation links on mobile */
+                text-align: center;
+            }
+
+            .nav_links a {
+                display: inline-block;
+                margin: 0.5rem;
+                font-size: 1.2rem;
             }
 
             .header_logo {
@@ -272,45 +280,29 @@
     <main>
         <section id="about" class="about_section">
             <h2>About Us</h2>
-            <p>Game Bunk is a space where you can get online free-to-play games that you can run on your school PC without any issues.</p>
+            <p>Game Bunk is a space where you can get online free-to-play games that you can run on your school PC without any issues. Enjoy the fun!</p>
         </section>
 
-        <section id="games">
-            <h2>Games</h2>
-            <div class="games_section">
-                <!-- Game Cards (Example with 20 games) -->
+        <section id="games" class="games_section">
+            <h2>Popular Games</h2>
+            <div class="games_list">
                 <div class="game_card"><img src="assets/imgs/game1.png" alt="Game 1"><a href="#">Game 1</a></div>
                 <div class="game_card"><img src="assets/imgs/game2.png" alt="Game 2"><a href="#">Game 2</a></div>
-                <div class="game_card"><img src="assets/imgs/game3.png" alt="Game 3"><a href="#">Game 3</a></div>
-                <div class="game_card"><img src="assets/imgs/game4.png" alt="Game 4"><a href="#">Game 4</a></div>
-                <div class="game_card"><img src="assets/imgs/game5.png" alt="Game 5"><a href="#">Game 5</a></div>
-                <div class="game_card"><img src="assets/imgs/game6.png" alt="Game 6"><a href="#">Game 6</a></div>
-                <div class="game_card"><img src="assets/imgs/game7.png" alt="Game 7"><a href="#">Game 7</a></div>
-                <div class="game_card"><img src="assets/imgs/game8.png" alt="Game 8"><a href="#">Game 8</a></div>
-                <div class="game_card"><img src="assets/imgs/game9.png" alt="Game 9"><a href="#">Game 9</a></div>
-                <div class="game_card"><img src="assets/imgs/game10.png" alt="Game 10"><a href="#">Game 10</a></div>
-                <div class="game_card"><img src="assets/imgs/game11.png" alt="Game 11"><a href="#">Game 11</a></div>
-                <div class="game_card"><img src="assets/imgs/game12.png" alt="Game 12"><a href="#">Game 12</a></div>
-                <div class="game_card"><img src="assets/imgs/game13.png" alt="Game 13"><a href="#">Game 13</a></div>
-                <div class="game_card"><img src="assets/imgs/game14.png" alt="Game 14"><a href="#">Game 14</a></div>
-                <div class="game_card"><img src="assets/imgs/game15.png" alt="Game 15"><a href="#">Game 15</a></div>
-                <div class="game_card"><img src="assets/imgs/game16.png" alt="Game 16"><a href="#">Game 16</a></div>
-                <div class="game_card"><img src="assets/imgs/game17.png" alt="Game 17"><a href="#">Game 17</a></div>
-                <div class="game_card"><img src="assets/imgs/game18.png" alt="Game 18"><a href="#">Game 18</a></div>
-                <div class="game_card"><img src="assets/imgs/game19.png" alt="Game 19"><a href="#">Game 19</a></div>
-                <div class="game_card"><img src="assets/imgs/game20.png" alt="Game 20"><a href="#">Game 20</a></div>
+                <!-- Additional game cards here -->
             </div>
         </section>
     </main>
 
     <!-- Footer Section -->
     <footer>
-        <script>
-            function searchFunction() {
-                let query = document.getElementById('searchInput').value.toLowerCase();
-                alert('Search initiated for: ' + query); // Placeholder for search logic
-            }
-        </script>
+        <p>© 2024 Bilota. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        function searchFunction() {
+            let query = document.getElementById('searchInput').value.toLowerCase();
+            alert('Search initiated for: ' + query); // Placeholder for search logic
+        }
+    </script>
 </body>
 </html>
