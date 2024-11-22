@@ -85,31 +85,43 @@
         /* Games Section Grid */
         .games_section {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+            grid-template-columns: repeat(2, 1fr); /* Two games per row */
             gap: 1.5rem;
         }
 
-        .games_section .game_card {
+        .game_card {
             background-color: #2a2a3f; /* Distinct background for cards */
             padding: 1rem;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
-        .games_section .game_card:hover {
+        .game_card:hover {
             transform: translateY(-5px);
             box-shadow: 0 6px 12px rgba(0, 255, 204, 0.5);
         }
 
-        .games_section a {
+        .game_card img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .game_card a {
             color: #00ffcc; /* Bright blue for game links */
             text-decoration: none;
             font-weight: bold;
             transition: color 0.3s, transform 0.3s;
         }
 
-        .games_section a:hover {
+        .game_card a:hover {
             color: #ffcc00; /* Bright yellow on hover */
             transform: scale(1.05);
         }
@@ -154,20 +166,87 @@
         <section id="games">
             <h2>Games</h2>
             <div class="games_section">
-                <div class="game_card"><strong><a href="https://1v1.lol" target="_blank">1v1.LOL</a></strong> - A battle royale and building game similar to Fortnite.</div>
-                <div class="game_card"><strong><a href="https://paper-io.com" target="_blank">Paper.io 2</a></strong> - Conquer the most territory by drawing lines on the map.</div>
-                <div class="game_card"><strong><a href="https://surviv.io" target="_blank">Surviv.io</a></strong> - A 2D battle royale game.</div>
-                <div class="game_card"><strong><a href="https://haxball.com" target="_blank">HaxBall</a></strong> - A fun multiplayer soccer game.</div>
-                <div class="game_card"><strong><a href="https://wormszone.com" target="_blank">Worms Zone</a></strong> - A colorful multiplayer snake game.</div>
-                <div class="game_card"><strong><a href="https://miniroyale.io" target="_blank">MiniRoyale.io</a></strong> - A fast-paced FPS battle royale game.</div>
-                <div class="game_card"><strong><a href="https://mope.io" target="_blank">Mope.io</a></strong> - Survive and evolve as different animals in a multiplayer world.</div>
-                <div class="game_card"><strong><a href="https://skribbl.io" target="_blank">Skribbl.io</a></strong> - A fun multiplayer drawing and guessing game.</div>
-                <div class="game_card"><strong><a href="https://bonk.io" target="_blank">Bonk.io</a></strong> - A physics-based multiplayer platformer game.</div>
-                <div class="game_card"><strong><a href="https://diep.io" target="_blank">Diep.io</a></strong> - Upgrade your tank and battle others in this multiplayer arena game.</div>
-                <div class="game_card"><strong><a href="https://flyordie.io" target="_blank">FlyOrDie.io</a></strong> - Evolve and survive as various flying creatures.</div>
-                <div class="game_card"><strong><a href="https://hole-io.com" target="_blank">Hole.io</a></strong> - Compete to become the largest black hole in the city.</div>
+                <!-- Game 1 -->
+                <div class="game_card">
+                    <img src="assets/imgs/1v1lol.jpg" alt="1v1.LOL">
+                    <strong><a href="https://1v1.lol" target="_blank">1v1.LOL</a></strong>
+                    <p>A battle royale and building game similar to Fortnite.</p>
+                </div>
+                <!-- Game 2 -->
+                <div class="game_card">
+                    <img src="assets/imgs/paperio.jpg" alt="Paper.io 2">
+                    <strong><a href="https://paper-io.com" target="_blank">Paper.io 2</a></strong>
+                    <p>Conquer the most territory by drawing lines on the map.</p>
+                </div>
+                <!-- Game 3 -->
+                <div class="game_card">
+                    <img src="assets/imgs/survivio.jpg" alt="Surviv.io">
+                    <strong><a href="https://surviv.io" target="_blank">Surviv.io</a></strong>
+                    <p>A 2D battle royale game.</p>
+                </div>
+                <!-- Game 4 -->
+                <div class="game_card">
+                    <img src="assets/imgs/haxball.jpg" alt="HaxBall">
+                    <strong><a href="https://haxball.com" target="_blank">HaxBall</a></strong>
+                    <p>A fun multiplayer soccer game.</p>
+                </div>
+                <!-- Game 5 -->
+                <div class="game_card">
+                    <img src="assets/imgs/wormszone.jpg" alt="Worms Zone">
+                    <strong><a href="https://wormszone.com" target="_blank">Worms Zone</a></strong>
+                    <p>A colorful multiplayer snake game.</p>
+                </div>
+                <!-- Game 6 -->
+                <div class="game_card">
+                    <img src="assets/imgs/miniroyale.jpg" alt="MiniRoyale.io">
+                    <strong><a href="https://miniroyale.io" target="_blank">MiniRoyale.io</a></strong>
+                    <p>A fast-paced FPS battle royale game.</p>
+                </div>
+                <!-- Game 7 -->
+                <div class="game_card">
+                    <img src="assets/imgs/mopeio.jpg" alt="Mope.io">
+                    <strong><a href="https://mope.io" target="_blank">Mope.io</a></strong>
+                    <p>Survive and evolve as different animals in a multiplayer world.</p>
+                </div>
+                <!-- Game 8 -->
+                <div class="game_card">
+                    <img src="assets/imgs/skribblio.jpg" alt="Skribbl.io">
+                    <strong><a href="https://skribbl.io" target="_blank">Skribbl.io</a></strong>
+                    <p>A fun multiplayer drawing and guessing game.</p>
+                </div>
+                <!-- Game 9 -->
+                <div class="game_card">
+                    <img src="assets/imgs/bonkio.jpg" alt="Bonk.io">
+                    <strong><a href="https://bonk.io" target="_blank">Bonk.io</a></strong>
+                    <p>A physics-based multiplayer platformer game.</p>
+                </div>
+                <!-- Game 10 -->
+                <div class="game_card">
+                    <img src="assets/imgs/diepio.jpg" alt="Diep.io">
+                    <strong><a href="https://diep.io" target="_blank">Diep.io</a></strong>
+                    <p>Upgrade your tank and battle others in this multiplayer arena game.</p>
+                </div>
+                <!-- Game 11 -->
+                <div class="game_card">
+                    <img src="assets/imgs/flyordieio.jpg" alt="FlyOrDie.io">
+                    <strong><a href="https://flyordie.io" target="_blank">FlyOrDie.io</a></strong>
+                    <p>Evolve and survive as various flying creatures.</p>
+                </div>
+                <!-- Game 12 -->
+                <div class="game_card">
+                    <img src="assets/imgs/holeio.jpg" alt="Hole.io">
+                    <strong><a href="https://hole-io.com" target="_blank">Hole.io</a></strong>
+                    <p>Compete to become the largest black hole in the city.</p>
+                </div>
+                <!-- Add more games similarly... -->
             </div>
         </section>
     </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Bilota. All rights reserved.</p>
+        <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a>
+    </footer>
 </body>
 </html>
