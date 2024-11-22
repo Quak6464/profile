@@ -149,7 +149,7 @@
         </div>
         <ul class="nav_links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="shop.html">Tool</a></li>
+            <li><a href="tool.html">Tools</a></li>
             <li><a href="contacts.html">Contacts</a></li>
         </ul>
     </header>
@@ -157,19 +157,108 @@
     <!-- Main Content Section -->
     <main>
         <section id="tool">
-            <h2>Tool: Online Converter</h2>
-            <p>Use this simple tool to convert between different units or values. Enter the value and choose the operation.</p>
+            <h2>Useful Daily Life Tools</h2>
+            <p>Select a tool, input values, and get results!</p>
             
-            <div class="tool_form">
-                <input class="tool_input" type="number" id="inputValue" placeholder="Enter value">
-                <select class="tool_input" id="operation">
-                    <option value="convertKmToMiles">Kilometers to Miles</option>
-                    <option value="convertCelsiusToFahrenheit">Celsius to Fahrenheit</option>
-                    <!-- Add more conversion options as necessary -->
-                </select>
-                <button class="tool_button" onclick="convertValue()">Convert</button>
-                <p id="result" style="color: #00ccff;"></p>
-            </div>
+            <!-- Tool 1: Unit Converter (Kilometers to Miles) -->
+            <section>
+                <h2>Unit Converter (Kilometers to Miles)</h2>
+                <div class="tool_form">
+                    <input class="tool_input" type="number" id="kmToMiles" placeholder="Enter kilometers">
+                    <button class="tool_button" onclick="convertKmToMiles()">Convert</button>
+                    <p id="kmToMilesResult" style="color: #00ccff;"></p>
+                </div>
+            </section>
+
+            <!-- Tool 2: Celsius to Fahrenheit Converter -->
+            <section>
+                <h2>Celsius to Fahrenheit Converter</h2>
+                <div class="tool_form">
+                    <input class="tool_input" type="number" id="celsiusToFahrenheit" placeholder="Enter Celsius">
+                    <button class="tool_button" onclick="convertCelsiusToFahrenheit()">Convert</button>
+                    <p id="celsiusToFahrenheitResult" style="color: #00ccff;"></p>
+                </div>
+            </section>
+
+            <!-- Tool 3: Currency Converter (USD to EUR) -->
+            <section>
+                <h2>Currency Converter (USD to EUR)</h2>
+                <div class="tool_form">
+                    <input class="tool_input" type="number" id="usdToEur" placeholder="Enter USD">
+                    <button class="tool_button" onclick="convertUsdToEur()">Convert</button>
+                    <p id="usdToEurResult" style="color: #00ccff;"></p>
+                </div>
+            </section>
+
+            <!-- Tool 4: Time Converter (Seconds to Minutes) -->
+            <section>
+                <h2>Time Converter (Seconds to Minutes)</h2>
+                <div class="tool_form">
+                    <input class="tool_input" type="number" id="secToMin" placeholder="Enter seconds">
+                    <button class="tool_button" onclick="convertSecToMin()">Convert</button>
+                    <p id="secToMinResult" style="color: #00ccff;"></p>
+                </div>
+            </section>
+
+            <!-- Tool 5: Area Converter (Square Meters to Square Feet) -->
+            <section>
+                <h2>Area Converter (Square Meters to Square Feet)</h2>
+                <div class="tool_form">
+                    <input class="tool_input" type="number" id="sqmToSqft" placeholder="Enter square meters">
+                    <button class="tool_button" onclick="convertSqmToSqft()">Convert</button>
+                    <p id="sqmToSqftResult" style="color: #00ccff;"></p>
+                </div>
+            </section>
+
+            <!-- Tool 6: Weight Converter (Kilograms to Pounds) -->
+            <section>
+                <h2>Weight Converter (Kilograms to Pounds)</h2>
+                <div class="tool_form">
+                    <input class="tool_input" type="number" id="kgToPounds" placeholder="Enter kilograms">
+                    <button class="tool_button" onclick="convertKgToPounds()">Convert</button>
+                    <p id="kgToPoundsResult" style="color: #00ccff;"></p>
+                </div>
+            </section>
+
+            <!-- Tool 7: Speed Converter (Kilometers per Hour to Miles per Hour) -->
+            <section>
+                <h2>Speed Converter (Kilometers per Hour to Miles per Hour)</h2>
+                <div class="tool_form">
+                    <input class="tool_input" type="number" id="kmphToMph" placeholder="Enter kilometers per hour">
+                    <button class="tool_button" onclick="convertKmphToMph()">Convert</button>
+                    <p id="kmphToMphResult" style="color: #00ccff;"></p>
+                </div>
+            </section>
+
+            <!-- Tool 8: Volume Converter (Liters to Gallons) -->
+            <section>
+                <h2>Volume Converter (Liters to Gallons)</h2>
+                <div class="tool_form">
+                    <input class="tool_input" type="number" id="litersToGallons" placeholder="Enter liters">
+                    <button class="tool_button" onclick="convertLitersToGallons()">Convert</button>
+                    <p id="litersToGallonsResult" style="color: #00ccff;"></p>
+                </div>
+            </section>
+
+            <!-- Tool 9: Age Calculator (Days to Years) -->
+            <section>
+                <h2>Age Calculator (Days to Years)</h2>
+                <div class="tool_form">
+                    <input class="tool_input" type="number" id="daysToYears" placeholder="Enter days">
+                    <button class="tool_button" onclick="convertDaysToYears()">Convert</button>
+                    <p id="daysToYearsResult" style="color: #00ccff;"></p>
+                </div>
+            </section>
+
+            <!-- Tool 10: Fuel Efficiency Converter (Miles per Gallon to Liters per 100km) -->
+            <section>
+                <h2>Fuel Efficiency Converter (MPG to L/100km)</h2>
+                <div class="tool_form">
+                    <input class="tool_input" type="number" id="mpgToL100km" placeholder="Enter miles per gallon">
+                    <button class="tool_button" onclick="convertMpgToL100km()">Convert</button>
+                    <p id="mpgToL100kmResult" style="color: #00ccff;"></p>
+                </div>
+            </section>
         </section>
     </main>
 
@@ -180,19 +269,64 @@
 
     <!-- JavaScript for tool functionality -->
     <script>
-        function convertValue() {
-            const value = parseFloat(document.getElementById("inputValue").value);
-            const operation = document.getElementById("operation").value;
-            let result;
+        function convertKmToMiles() {
+            const value = parseFloat(document.getElementById("kmToMiles").value);
+            const result = value * 0.621371;
+            document.getElementById("kmToMilesResult").textContent = `${value} kilometers = ${result.toFixed(2)} miles.`;
+        }
 
-            if (operation === "convertKmToMiles") {
-                result = value * 0.621371;
-                document.getElementById("result").textContent = `${value} kilometers = ${result.toFixed(2)} miles.`;
-            } else if (operation === "convertCelsiusToFahrenheit") {
-                result = (value * 9/5) + 32;
-                document.getElementById("result").textContent = `${value}°C = ${result.toFixed(2)}°F.`;
-            }
-            // Add more conversion logic as needed
+        function convertCelsiusToFahrenheit() {
+            const value = parseFloat(document.getElementById("celsiusToFahrenheit").value);
+            const result = (value * 9/5) + 32;
+            document.getElementById("celsiusToFahrenheitResult").textContent = `${value}°C = ${result.toFixed(2)}°F.`;
+        }
+
+        function convertUsdToEur() {
+            const value = parseFloat(document.getElementById("usdToEur").value);
+            const result = value * 0.85; // Example conversion rate
+            document.getElementById("usdToEurResult").textContent = `${value} USD = ${result.toFixed(2)} EUR.`;
+        }
+
+        function convertSecToMin() {
+            const value = parseFloat(document.getElementById("secToMin").value);
+            const result = value / 60;
+            document.getElementById("secToMinResult").textContent = `${value} seconds = ${result.toFixed(2)} minutes.`;
+        }
+
+        function convertSqmToSqft() {
+            const value = parseFloat(document.getElementById("sqmToSqft").value);
+            const result = value * 10.7639;
+            document.getElementById("sqmToSqftResult").textContent = `${value} square meters = ${result.toFixed(2)} square feet.`;
+        }
+
+        function convertKgToPounds() {
+            const value = parseFloat(document.getElementById("kgToPounds").value);
+            const result = value * 2.20462;
+            document.getElementById("kgToPoundsResult").textContent = `${value} kilograms = ${result.toFixed(2)} pounds.`;
+        }
+
+        function convertKmphToMph() {
+            const value = parseFloat(document.getElementById("kmphToMph").value);
+            const result = value * 0.621371;
+            document.getElementById("kmphToMphResult").textContent = `${value} km/h = ${result.toFixed(2)} mph.`;
+        }
+
+        function convertLitersToGallons() {
+            const value = parseFloat(document.getElementById("litersToGallons").value);
+            const result = value * 0.264172;
+            document.getElementById("litersToGallonsResult").textContent = `${value} liters = ${result.toFixed(2)} gallons.`;
+        }
+
+        function convertDaysToYears() {
+            const value = parseFloat(document.getElementById("daysToYears").value);
+            const result = value / 365.25;
+            document.getElementById("daysToYearsResult").textContent = `${value} days = ${result.toFixed(2)} years.`;
+        }
+
+        function convertMpgToL100km() {
+            const value = parseFloat(document.getElementById("mpgToL100km").value);
+            const result = (100 / value) * 2.35215;
+            document.getElementById("mpgToL100kmResult").textContent = `${value} MPG = ${result.toFixed(2)} L/100km.`;
         }
     </script>
 </body>
