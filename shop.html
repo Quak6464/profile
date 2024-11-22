@@ -157,106 +157,46 @@
     <!-- Main Content Section -->
     <main>
         <section id="tool">
-            <h2>Useful Daily Life Tools</h2>
-            <p>Select a tool, input values, and get results!</p>
+            <h2>Advanced Tools</h2>
+            <p>Use the advanced tools below for email checks, password strength, and more!</p>
             
-            <!-- Tool 1: Unit Converter (Kilometers to Miles) -->
+            <!-- Tool 1: Email Spam Checker -->
             <section>
-                <h2>Unit Converter (Kilometers to Miles)</h2>
+                <h2>Email Spam Checker</h2>
                 <div class="tool_form">
-                    <input class="tool_input" type="number" id="kmToMiles" placeholder="Enter kilometers">
-                    <button class="tool_button" onclick="convertKmToMiles()">Convert</button>
-                    <p id="kmToMilesResult" style="color: #00ccff;"></p>
+                    <input class="tool_input" type="email" id="emailChecker" placeholder="Enter email address">
+                    <button class="tool_button" onclick="checkEmailSpam()">Check Spam</button>
+                    <p id="emailCheckerResult" style="color: #00ccff;"></p>
                 </div>
             </section>
 
-            <!-- Tool 2: Celsius to Fahrenheit Converter -->
+            <!-- Tool 2: Password Strength Checker -->
             <section>
-                <h2>Celsius to Fahrenheit Converter</h2>
+                <h2>Password Strength Checker</h2>
                 <div class="tool_form">
-                    <input class="tool_input" type="number" id="celsiusToFahrenheit" placeholder="Enter Celsius">
-                    <button class="tool_button" onclick="convertCelsiusToFahrenheit()">Convert</button>
-                    <p id="celsiusToFahrenheitResult" style="color: #00ccff;"></p>
+                    <input class="tool_input" type="password" id="passwordChecker" placeholder="Enter password">
+                    <button class="tool_button" onclick="checkPasswordStrength()">Check Strength</button>
+                    <p id="passwordCheckerResult" style="color: #00ccff;"></p>
                 </div>
             </section>
 
-            <!-- Tool 3: Currency Converter (USD to EUR) -->
+            <!-- Tool 3: Text Sentiment Analyzer -->
             <section>
-                <h2>Currency Converter (USD to EUR)</h2>
+                <h2>Text Sentiment Analyzer</h2>
                 <div class="tool_form">
-                    <input class="tool_input" type="number" id="usdToEur" placeholder="Enter USD">
-                    <button class="tool_button" onclick="convertUsdToEur()">Convert</button>
-                    <p id="usdToEurResult" style="color: #00ccff;"></p>
+                    <textarea class="tool_input" id="textSentiment" placeholder="Enter text for sentiment analysis"></textarea>
+                    <button class="tool_button" onclick="analyzeSentiment()">Analyze Sentiment</button>
+                    <p id="textSentimentResult" style="color: #00ccff;"></p>
                 </div>
             </section>
 
-            <!-- Tool 4: Time Converter (Seconds to Minutes) -->
+            <!-- Tool 4: URL Safety Checker -->
             <section>
-                <h2>Time Converter (Seconds to Minutes)</h2>
+                <h2>URL Safety Checker</h2>
                 <div class="tool_form">
-                    <input class="tool_input" type="number" id="secToMin" placeholder="Enter seconds">
-                    <button class="tool_button" onclick="convertSecToMin()">Convert</button>
-                    <p id="secToMinResult" style="color: #00ccff;"></p>
-                </div>
-            </section>
-
-            <!-- Tool 5: Area Converter (Square Meters to Square Feet) -->
-            <section>
-                <h2>Area Converter (Square Meters to Square Feet)</h2>
-                <div class="tool_form">
-                    <input class="tool_input" type="number" id="sqmToSqft" placeholder="Enter square meters">
-                    <button class="tool_button" onclick="convertSqmToSqft()">Convert</button>
-                    <p id="sqmToSqftResult" style="color: #00ccff;"></p>
-                </div>
-            </section>
-
-            <!-- Tool 6: Weight Converter (Kilograms to Pounds) -->
-            <section>
-                <h2>Weight Converter (Kilograms to Pounds)</h2>
-                <div class="tool_form">
-                    <input class="tool_input" type="number" id="kgToPounds" placeholder="Enter kilograms">
-                    <button class="tool_button" onclick="convertKgToPounds()">Convert</button>
-                    <p id="kgToPoundsResult" style="color: #00ccff;"></p>
-                </div>
-            </section>
-
-            <!-- Tool 7: Speed Converter (Kilometers per Hour to Miles per Hour) -->
-            <section>
-                <h2>Speed Converter (Kilometers per Hour to Miles per Hour)</h2>
-                <div class="tool_form">
-                    <input class="tool_input" type="number" id="kmphToMph" placeholder="Enter kilometers per hour">
-                    <button class="tool_button" onclick="convertKmphToMph()">Convert</button>
-                    <p id="kmphToMphResult" style="color: #00ccff;"></p>
-                </div>
-            </section>
-
-            <!-- Tool 8: Volume Converter (Liters to Gallons) -->
-            <section>
-                <h2>Volume Converter (Liters to Gallons)</h2>
-                <div class="tool_form">
-                    <input class="tool_input" type="number" id="litersToGallons" placeholder="Enter liters">
-                    <button class="tool_button" onclick="convertLitersToGallons()">Convert</button>
-                    <p id="litersToGallonsResult" style="color: #00ccff;"></p>
-                </div>
-            </section>
-
-            <!-- Tool 9: Age Calculator (Days to Years) -->
-            <section>
-                <h2>Age Calculator (Days to Years)</h2>
-                <div class="tool_form">
-                    <input class="tool_input" type="number" id="daysToYears" placeholder="Enter days">
-                    <button class="tool_button" onclick="convertDaysToYears()">Convert</button>
-                    <p id="daysToYearsResult" style="color: #00ccff;"></p>
-                </div>
-            </section>
-
-            <!-- Tool 10: Fuel Efficiency Converter (Miles per Gallon to Liters per 100km) -->
-            <section>
-                <h2>Fuel Efficiency Converter (MPG to L/100km)</h2>
-                <div class="tool_form">
-                    <input class="tool_input" type="number" id="mpgToL100km" placeholder="Enter miles per gallon">
-                    <button class="tool_button" onclick="convertMpgToL100km()">Convert</button>
-                    <p id="mpgToL100kmResult" style="color: #00ccff;"></p>
+                    <input class="tool_input" type="url" id="urlChecker" placeholder="Enter URL to check">
+                    <button class="tool_button" onclick="checkUrlSafety()">Check URL Safety</button>
+                    <p id="urlCheckerResult" style="color: #00ccff;"></p>
                 </div>
             </section>
         </section>
@@ -269,64 +209,76 @@
 
     <!-- JavaScript for tool functionality -->
     <script>
-        function convertKmToMiles() {
-            const value = parseFloat(document.getElementById("kmToMiles").value);
-            const result = value * 0.621371;
-            document.getElementById("kmToMilesResult").textContent = `${value} kilometers = ${result.toFixed(2)} miles.`;
+        // Tool 1: Email Spam Checker
+        function checkEmailSpam() {
+            const email = document.getElementById("emailChecker").value;
+            const spamKeywords = ["buy", "free", "winner", "congratulations", "offer", "limited time"];
+            const regex = /\S+@\S+\.\S+/;
+
+            if (!regex.test(email)) {
+                document.getElementById("emailCheckerResult").textContent = "Invalid email format.";
+                return;
+            }
+
+            const lowerCaseEmail = email.toLowerCase();
+            let isSpam = spamKeywords.some(keyword => lowerCaseEmail.includes(keyword));
+            document.getElementById("emailCheckerResult").textContent = isSpam ? "This email may be spam." : "This email looks safe.";
         }
 
-        function convertCelsiusToFahrenheit() {
-            const value = parseFloat(document.getElementById("celsiusToFahrenheit").value);
-            const result = (value * 9/5) + 32;
-            document.getElementById("celsiusToFahrenheitResult").textContent = `${value}°C = ${result.toFixed(2)}°F.`;
+        // Tool 2: Password Strength Checker
+        function checkPasswordStrength() {
+            const password = document.getElementById("passwordChecker").value;
+            let strength = "Weak";
+
+            if (password.length >= 8) {
+                const regexUpper = /[A-Z]/;
+                const regexLower = /[a-z]/;
+                const regexDigits = /\d/;
+                const regexSpecial = /[!@#$%^&*(),.?":{}|<>]/;
+
+                if (regexUpper.test(password) && regexLower.test(password) && regexDigits.test(password) && regexSpecial.test(password)) {
+                    strength = "Strong";
+                } else {
+                    strength = "Medium";
+                }
+            }
+
+            document.getElementById("passwordCheckerResult").textContent = `Password Strength: ${strength}`;
         }
 
-        function convertUsdToEur() {
-            const value = parseFloat(document.getElementById("usdToEur").value);
-            const result = value * 0.85; // Example conversion rate
-            document.getElementById("usdToEurResult").textContent = `${value} USD = ${result.toFixed(2)} EUR.`;
+        // Tool 3: Sentiment Analyzer
+        function analyzeSentiment() {
+            const text = document.getElementById("textSentiment").value;
+            const positiveWords = ["happy", "great", "love", "exciting", "good"];
+            const negativeWords = ["sad", "bad", "hate", "angry", "upset"];
+
+            let positiveCount = 0;
+            let negativeCount = 0;
+
+            const words = text.split(/\s+/);
+
+            words.forEach(word => {
+                if (positiveWords.includes(word.toLowerCase())) positiveCount++;
+                if (negativeWords.includes(word.toLowerCase())) negativeCount++;
+            });
+
+            if (positiveCount > negativeCount) {
+                document.getElementById("textSentimentResult").textContent = "Sentiment: Positive";
+            } else if (negativeCount > positiveCount) {
+                document.getElementById("textSentimentResult").textContent = "Sentiment: Negative";
+            } else {
+                document.getElementById("textSentimentResult").textContent = "Sentiment: Neutral";
+            }
         }
 
-        function convertSecToMin() {
-            const value = parseFloat(document.getElementById("secToMin").value);
-            const result = value / 60;
-            document.getElementById("secToMinResult").textContent = `${value} seconds = ${result.toFixed(2)} minutes.`;
-        }
-
-        function convertSqmToSqft() {
-            const value = parseFloat(document.getElementById("sqmToSqft").value);
-            const result = value * 10.7639;
-            document.getElementById("sqmToSqftResult").textContent = `${value} square meters = ${result.toFixed(2)} square feet.`;
-        }
-
-        function convertKgToPounds() {
-            const value = parseFloat(document.getElementById("kgToPounds").value);
-            const result = value * 2.20462;
-            document.getElementById("kgToPoundsResult").textContent = `${value} kilograms = ${result.toFixed(2)} pounds.`;
-        }
-
-        function convertKmphToMph() {
-            const value = parseFloat(document.getElementById("kmphToMph").value);
-            const result = value * 0.621371;
-            document.getElementById("kmphToMphResult").textContent = `${value} km/h = ${result.toFixed(2)} mph.`;
-        }
-
-        function convertLitersToGallons() {
-            const value = parseFloat(document.getElementById("litersToGallons").value);
-            const result = value * 0.264172;
-            document.getElementById("litersToGallonsResult").textContent = `${value} liters = ${result.toFixed(2)} gallons.`;
-        }
-
-        function convertDaysToYears() {
-            const value = parseFloat(document.getElementById("daysToYears").value);
-            const result = value / 365.25;
-            document.getElementById("daysToYearsResult").textContent = `${value} days = ${result.toFixed(2)} years.`;
-        }
-
-        function convertMpgToL100km() {
-            const value = parseFloat(document.getElementById("mpgToL100km").value);
-            const result = (100 / value) * 2.35215;
-            document.getElementById("mpgToL100kmResult").textContent = `${value} MPG = ${result.toFixed(2)} L/100km.`;
+        // Tool 4: URL Safety Checker (Simulated)
+        function checkUrlSafety() {
+            const url = document.getElementById("urlChecker").value;
+            if (url.includes("malicious")) {
+                document.getElementById("urlCheckerResult").textContent = "Warning: This URL may be unsafe.";
+            } else {
+                document.getElementById("urlCheckerResult").textContent = "This URL seems safe.";
+            }
         }
     </script>
 </body>
