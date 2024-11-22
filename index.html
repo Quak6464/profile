@@ -82,9 +82,24 @@
             color: #00ccff; /* Bright section headings */
         }
 
-        /* Games Section Links */
-        .games_section ul li {
-            margin-bottom: 1rem; /* Space between each game */
+        /* Games Section Grid */
+        .games_section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+            gap: 1.5rem;
+        }
+
+        .games_section .game_card {
+            background-color: #2a2a3f; /* Distinct background for cards */
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .games_section .game_card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 255, 204, 0.5);
         }
 
         .games_section a {
@@ -97,18 +112,6 @@
         .games_section a:hover {
             color: #ffcc00; /* Bright yellow on hover */
             transform: scale(1.05);
-        }
-
-        /* Banner Space */
-        .banner {
-            margin: 2rem 0;
-            text-align: center;
-            background-color: #1e1e2f;
-            padding: 3rem;
-            border-radius: 10px;
-            color: #ffffff;
-            font-size: 1.5rem;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         }
 
         footer {
@@ -141,11 +144,6 @@
         </ul>
     </header>
 
-    <!-- Banner Space -->
-    <div class="banner">
-        <img src="assets/imgs/" alt="Banner">
-    </div>
-
     <!-- Main Content Section -->
     <main>
         <section id="about" class="about_section">
@@ -153,44 +151,23 @@
             <p>Game Bunk is a space where you can get online free-to-play games that you can run on your school PC without any issues.</p>
         </section>
 
-        <section id="games" class="games_section">
+        <section id="games">
             <h2>Games</h2>
-            <ul>
-                <li><strong><a href="https://1v1.lol" target="_blank">1v1.LOL</a></strong> - A battle royale and building game similar to Fortnite.</li>
-                <li><strong><a href="https://paper-io.com" target="_blank">Paper.io 2</a></strong> - Conquer the most territory by drawing lines on the map.</li>
-                <li><strong><a href="https://surviv.io" target="_blank">Surviv.io</a></strong> - A 2D battle royale game.</li>
-                <li><strong><a href="https://haxball.com" target="_blank">HaxBall</a></strong> - A fun multiplayer soccer game.</li>
-                <li><strong><a href="https://wormszone.com" target="_blank">Worms Zone</a></strong> - A colorful multiplayer snake game.</li>
-                <li><strong><a href="https://miniroyale.io" target="_blank">MiniRoyale.io</a></strong> - A fast-paced FPS battle royale game.</li>
-                <li><strong><a href="https://mope.io" target="_blank">Mope.io</a></strong> - Survive and evolve as different animals in a multiplayer world.</li>
-                <li><strong><a href="https://skribbl.io" target="_blank">Skribbl.io</a></strong> - A fun multiplayer drawing and guessing game.</li>
-                <li><strong><a href="https://bonk.io" target="_blank">Bonk.io</a></strong> - A physics-based multiplayer platformer game.</li>
-                <li><strong><a href="https://diep.io" target="_blank">Diep.io</a></strong> - Upgrade your tank and battle others in this multiplayer arena game.</li>
-                <li><strong><a href="https://flyordie.io" target="_blank">FlyOrDie.io</a></strong> - Evolve and survive as various flying creatures.</li>
-                <li><strong><a href="https://hole-io.com" target="_blank">Hole.io</a></strong> - Compete to become the largest black hole in the city.</li>
-                <li><strong><a href="https://venge.io" target="_blank">Venge.io</a></strong> - A fast-paced multiplayer FPS game with unique weapons.</li>
-                <li><strong><a href="https://wings.io" target="_blank">Wings.io</a></strong> - Fly planes and shoot down opponents in this aerial multiplayer game.</li>
-                <li><strong><a href="https://pixelwarfare.io" target="_blank">Pixel Warfare</a></strong> - A block-style first-person shooter.</li>
-                <li><strong><a href="https://starblast.io" target="_blank">Starblast.io</a></strong> - A multiplayer space shooter game.</li>
-                <li><strong><a href="https://doodlejump.org" target="_blank">Doodle Jump Online</a></strong> - Play the classic jumping game online.</li>
-                <li><strong><a href="https://sideswipe.rocketleague.com" target="_blank">Rocket League Sideswipe</a></strong> - A 2D version of Rocket League for online play.</li>
-                <li><strong><a href="https://superhex.io" target="_blank">Superhex.io</a></strong> - Capture hexagonal territory in a multiplayer battle.</li>
-                <li><strong><a href="https://tanktrouble.com" target="_blank">Tank Trouble</a></strong> - A simple yet fun multiplayer tank battle game.</li>
-            </ul>
+            <div class="games_section">
+                <div class="game_card"><strong><a href="https://1v1.lol" target="_blank">1v1.LOL</a></strong> - A battle royale and building game similar to Fortnite.</div>
+                <div class="game_card"><strong><a href="https://paper-io.com" target="_blank">Paper.io 2</a></strong> - Conquer the most territory by drawing lines on the map.</div>
+                <div class="game_card"><strong><a href="https://surviv.io" target="_blank">Surviv.io</a></strong> - A 2D battle royale game.</div>
+                <div class="game_card"><strong><a href="https://haxball.com" target="_blank">HaxBall</a></strong> - A fun multiplayer soccer game.</div>
+                <div class="game_card"><strong><a href="https://wormszone.com" target="_blank">Worms Zone</a></strong> - A colorful multiplayer snake game.</div>
+                <div class="game_card"><strong><a href="https://miniroyale.io" target="_blank">MiniRoyale.io</a></strong> - A fast-paced FPS battle royale game.</div>
+                <div class="game_card"><strong><a href="https://mope.io" target="_blank">Mope.io</a></strong> - Survive and evolve as different animals in a multiplayer world.</div>
+                <div class="game_card"><strong><a href="https://skribbl.io" target="_blank">Skribbl.io</a></strong> - A fun multiplayer drawing and guessing game.</div>
+                <div class="game_card"><strong><a href="https://bonk.io" target="_blank">Bonk.io</a></strong> - A physics-based multiplayer platformer game.</div>
+                <div class="game_card"><strong><a href="https://diep.io" target="_blank">Diep.io</a></strong> - Upgrade your tank and battle others in this multiplayer arena game.</div>
+                <div class="game_card"><strong><a href="https://flyordie.io" target="_blank">FlyOrDie.io</a></strong> - Evolve and survive as various flying creatures.</div>
+                <div class="game_card"><strong><a href="https://hole-io.com" target="_blank">Hole.io</a></strong> - Compete to become the largest black hole in the city.</div>
+            </div>
         </section>
     </main>
-
-    <!-- Tawk.to Script -->
-    <script type="text/javascript">
-        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-        (function() {
-            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-            s1.async = true;
-            s1.src = 'https://embed.tawk.to/673e34de4304e3196ae5cce3/1id5ft25j';
-            s1.charset = 'UTF-8';
-            s1.setAttribute('crossorigin', '*');
-            s0.parentNode.insertBefore(s1, s0);
-        })();
-    </script>
 </body>
 </html>
