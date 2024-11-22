@@ -1,151 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta Tags -->
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tools Page</title>
+    <link rel="icon" href="assets/imgs/inaya_pfp.gif">
+
+    <!-- Title -->
+    <title>🌴 ・ Bilota Tool</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
     <style>
-        /* General Reset */
-        * {
+        /* Global Styles */
+        body {
+            font-family: 'Oxanium', sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            background-color: #0a0a1a; /* Dark background */
+            color: #ffffff; /* Light text for contrast */
         }
 
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #101010;
-            color: #ffffff;
-            line-height: 1.6;
-        }
-
+        /* Sticky Navigation */
         header {
-            background-color: #181818;
-            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: #121212;
+            padding: 1rem 2rem;
+            border-bottom: 2px solid #333;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .nav-links {
+        .header_logo img {
+            max-height: 50px;
+        }
+
+        .nav_links {
             list-style: none;
             display: flex;
-            gap: 20px;
+            gap: 1.5rem;
         }
 
-        .nav-links a {
-            color: #ffffff;
+        .nav_links a {
             text-decoration: none;
+            color: #ffffff;
             font-weight: bold;
+            padding: 0.5rem;
+            transition: color 0.3s, transform 0.3s;
         }
 
-        .logo img {
-            height: 40px;
-            width: 40px;
-            border-radius: 50%;
+        .nav_links a:hover {
+            color: #00ffcc;
+            transform: scale(1.1);
         }
 
-        .about-section, .tools-section {
-            margin: 20px auto;
-            padding: 20px;
-            width: 90%;
-            max-width: 800px;
-            background-color: #1f1f1f;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        main {
+            padding: 2rem;
         }
 
-        .about-section h2, .tools-section h2 {
-            color: #00ffff;
-            margin-bottom: 10px;
-        }
-
-        .tool-card {
-            background-color: #252525;
-            padding: 15px;
-            margin-top: 10px;
+        section {
+            margin-bottom: 2rem;
+            background-color: #1e1e2f;
+            padding: 2rem;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .tool-card img {
-            width: 100px;
-            height: 100px;
-            border-radius: 8px;
-            margin-bottom: 10px;
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 255, 204, 0.5);
         }
 
-        .tool-card h3 {
-            color: #00ffff;
-            margin-bottom: 5px;
+        section h2 {
+            color: #00ccff;
         }
 
         footer {
+            background-color: #121212;
+            color: #ffffff;
             text-align: center;
-            padding: 10px 0;
-            background-color: #181818;
-            color: #888;
+            padding: 1rem 0;
+        }
+
+        footer a {
+            color: #00aaff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Tool Form */
+        .tool_form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .tool_input {
+            padding: 1rem;
+            background-color: #2a2a3f;
+            border: none;
+            border-radius: 8px;
+            color: #ffffff;
+            font-size: 1rem;
+        }
+
+        .tool_button {
+            padding: 1rem;
+            background-color: #00ccff;
+            border: none;
+            border-radius: 8px;
+            color: #ffffff;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .tool_button:hover {
+            background-color: #00aaff;
         }
 
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
-            .nav-links {
-                flex-direction: column;
-                gap: 10px;
+            .tool_form {
+                gap: 0.5rem;
             }
 
-            .tool-card {
+            .tool_input, .tool_button {
                 width: 100%;
-                margin-top: 20px;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Header Section -->
     <header>
-        <div class="logo">
-            <img src="bilota.png" alt="Logo">
+        <div class="header_logo">
+            <img src="assets/imgs/bilota.png" alt="Bilota Logo">
         </div>
-        <ul class="nav-links">
+        <ul class="nav_links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="shop.html">Shop</a></li>
-            <li><a href="contact.html">Contacts</a></li>
+            <li><a href="tool.html">Tool</a></li>
+            <li><a href="contacts.html">Contacts</a></li>
         </ul>
     </header>
 
+    <!-- Main Content Section -->
     <main>
-        <section class="about-section">
-            <h2>About Us</h2>
-            <p>
-                This is a space where you can explore various tools and applications to enhance productivity and simplify your tasks.
-            </p>
-        </section>
-
-        <section class="tools-section">
-            <h2>Tools</h2>
-            <div class="tool-card">
-                <img src="tool-image1.jpg" alt="Tool 1">
-                <h3>Tool 1</h3>
-                <p>Tool 1 description goes here, highlighting its main features and utility.</p>
-            </div>
-            <div class="tool-card">
-                <img src="tool-image2.jpg" alt="Tool 2">
-                <h3>Tool 2</h3>
-                <p>Tool 2 description goes here, highlighting its main features and utility.</p>
+        <section id="tool">
+            <h2>Tool: Online Converter</h2>
+            <p>Use this simple tool to convert between different units or values. Enter the value and choose the operation.</p>
+            
+            <div class="tool_form">
+                <input class="tool_input" type="number" id="inputValue" placeholder="Enter value">
+                <select class="tool_input" id="operation">
+                    <option value="convertKmToMiles">Kilometers to Miles</option>
+                    <option value="convertCelsiusToFahrenheit">Celsius to Fahrenheit</option>
+                    <!-- Add more conversion options as necessary -->
+                </select>
+                <button class="tool_button" onclick="convertValue()">Convert</button>
+                <p id="result" style="color: #00ccff;"></p>
             </div>
         </section>
     </main>
 
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 Tools Page. All rights reserved.</p>
+        <p>Made with ❤️ by Bilota.</p>
     </footer>
 
+    <!-- JavaScript for tool functionality -->
     <script>
-        // Simple JavaScript example: Alert on page load
-        window.onload = function() {
-            alert("Welcome to the Tools Page!");
-        };
+        function convertValue() {
+            const value = parseFloat(document.getElementById("inputValue").value);
+            const operation = document.getElementById("operation").value;
+            let result;
+
+            if (operation === "convertKmToMiles") {
+                result = value * 0.621371;
+                document.getElementById("result").textContent = `${value} kilometers = ${result.toFixed(2)} miles.`;
+            } else if (operation === "convertCelsiusToFahrenheit") {
+                result = (value * 9/5) + 32;
+                document.getElementById("result").textContent = `${value}°C = ${result.toFixed(2)}°F.`;
+            }
+            // Add more conversion logic as needed
+        }
     </script>
 </body>
 </html>
