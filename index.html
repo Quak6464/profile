@@ -87,7 +87,7 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr); /* Two games per row */
             gap: 1.5rem;
-            grid-template-rows: auto;
+            justify-items: center; /* Centers game cards in the grid */
         }
 
         .game_card {
@@ -95,7 +95,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: space-between;
+            justify-content: space-between; /* Center content vertically within the card */
             padding: 1rem;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -233,73 +233,7 @@
                 <div class="game_card">
                     <img src="assets/imgs/denjex.jpg" alt="Denjex">
                     <strong><a href="https://denjex.com" target="_blank">Denjex</a></strong>
-                    <p>A competitive multiplayer online game.</p>
-                </div>
-                <!-- Game 10 -->
-                <div class="game_card">
-                    <img src="assets/imgs/diepio.jpg" alt="Diep.io">
-                    <strong><a href="https://diep.io" target="_blank">Diep.io</a></strong>
-                    <p>Upgrade your tank and battle others in this multiplayer arena game.</p>
-                </div>
-                <!-- Game 11 -->
-                <div class="game_card">
-                    <img src="assets/imgs/flyordieio.jpg" alt="FlyOrDie.io">
-                    <strong><a href="https://flyordie.io" target="_blank">FlyOrDie.io</a></strong>
-                    <p>Evolve and survive as various flying creatures.</p>
-                </div>
-                <!-- Game 12 -->
-                <div class="game_card">
-                    <img src="assets/imgs/holeio.jpg" alt="Hole.io">
-                    <strong><a href="https://hole-io.com" target="_blank">Hole.io</a></strong>
-                    <p>Compete to become the largest black hole in the city.</p>
-                </div>
-                <!-- Game 13 -->
-                <div class="game_card">
-                    <img src="assets/imgs/agar.io.jpg" alt="Agar.io">
-                    <strong><a href="https://agar.io" target="_blank">Agar.io</a></strong>
-                    <p>Consume others to grow bigger in this cell-eating game.</p>
-                </div>
-                <!-- Game 14 -->
-                <div class="game_card">
-                    <img src="assets/imgs/slitherio.jpg" alt="Slither.io">
-                    <strong><a href="https://slither.io" target="_blank">Slither.io</a></strong>
-                    <p>A snake game where you grow by eating pellets.</p>
-                </div>
-                <!-- Game 15 -->
-                <div class="game_card">
-                    <img src="assets/imgs/zimpli.jpg" alt="Zimplify.io">
-                    <strong><a href="https://zimplify.io" target="_blank">Zimplify.io</a></strong>
-                    <p>A creative multiplayer survival game.</p>
-                </div>
-                <!-- Game 16 -->
-                <div class="game_card">
-                    <img src="assets/imgs/tntrun.jpg" alt="TNT Run">
-                    <strong><a href="https://tntrun.io" target="_blank">TNT Run</a></strong>
-                    <p>Run and avoid falling in this fast-paced game.</p>
-                </div>
-                <!-- Game 17 -->
-                <div class="game_card">
-                    <img src="assets/imgs/brickbreaker.jpg" alt="Brick Breaker">
-                    <strong><a href="https://brickbreaker.io" target="_blank">Brick Breaker</a></strong>
-                    <p>Destroy the blocks using a ball and paddle.</p>
-                </div>
-                <!-- Game 18 -->
-                <div class="game_card">
-                    <img src="assets/imgs/racing.jpg" alt="Racing Game">
-                    <strong><a href="https://racing.io" target="_blank">Racing Game</a></strong>
-                    <p>Speed through courses in this fun racing game.</p>
-                </div>
-                <!-- Game 19 -->
-                <div class="game_card">
-                    <img src="assets/imgs/battlefield.jpg" alt="Battlefield.io">
-                    <strong><a href="https://battlefield.io" target="_blank">Battlefield.io</a></strong>
-                    <p>Battle in massive multiplayer wars.</p>
-                </div>
-                <!-- Game 20 -->
-                <div class="game_card">
-                    <img src="assets/imgs/swordfighting.jpg" alt="Sword Fighting">
-                    <strong><a href="https://swordfight.io" target="_blank">Sword Fighting</a></strong>
-                    <p>Defend and attack in a medieval sword combat game.</p>
+                    <p>A fun and fast-paced shooting game.</p>
                 </div>
             </div>
         </section>
@@ -307,8 +241,7 @@
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 Bilota. All rights reserved.</p>
-        <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a>
+        <p>Made with ❤️ by Bilota. <a href="privacy.html">Privacy Policy</a></p>
     </footer>
 </body>
 </html>
