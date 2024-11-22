@@ -145,7 +145,7 @@
         /* Games Section Grid */
         .games_section {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* Two games per row */
+            grid-template-columns: repeat(4, 1fr); /* Four games per row on desktop */
             gap: 1.5rem;
             grid-template-rows: auto;
         }
@@ -161,7 +161,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             height: 300px; /* Set height to make it square */
-            width: 300px; /* Set width to make it square */
+            width: 250px; /* Set width to make it square */
         }
 
         .game_card:hover {
@@ -219,6 +219,21 @@
             .search_bar input {
                 width: 200px; /* Adjust search bar width on mobile */
             }
+
+            /* Sticky hotbar for small screens */
+            .hotbar {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav_links {
+                display: none; /* Hide nav links on mobile */
+            }
+
+            .header_logo {
+                text-align: center;
+                margin-bottom: 1rem;
+            }
         }
     </style>
 </head>
@@ -256,23 +271,40 @@
         <section id="games">
             <h2>Games</h2>
             <div class="games_section">
-                <!-- Game Cards (same as previous content) -->
-                <!-- Add your game cards here as before -->
+                <!-- Game Cards (Example with 20 games) -->
+                <div class="game_card"><img src="assets/imgs/game1.png" alt="Game 1"><a href="#">Game 1</a></div>
+                <div class="game_card"><img src="assets/imgs/game2.png" alt="Game 2"><a href="#">Game 2</a></div>
+                <div class="game_card"><img src="assets/imgs/game3.png" alt="Game 3"><a href="#">Game 3</a></div>
+                <div class="game_card"><img src="assets/imgs/game4.png" alt="Game 4"><a href="#">Game 4</a></div>
+                <div class="game_card"><img src="assets/imgs/game5.png" alt="Game 5"><a href="#">Game 5</a></div>
+                <div class="game_card"><img src="assets/imgs/game6.png" alt="Game 6"><a href="#">Game 6</a></div>
+                <div class="game_card"><img src="assets/imgs/game7.png" alt="Game 7"><a href="#">Game 7</a></div>
+                <div class="game_card"><img src="assets/imgs/game8.png" alt="Game 8"><a href="#">Game 8</a></div>
+                <div class="game_card"><img src="assets/imgs/game9.png" alt="Game 9"><a href="#">Game 9</a></div>
+                <div class="game_card"><img src="assets/imgs/game10.png" alt="Game 10"><a href="#">Game 10</a></div>
+                <div class="game_card"><img src="assets/imgs/game11.png" alt="Game 11"><a href="#">Game 11</a></div>
+                <div class="game_card"><img src="assets/imgs/game12.png" alt="Game 12"><a href="#">Game 12</a></div>
+                <div class="game_card"><img src="assets/imgs/game13.png" alt="Game 13"><a href="#">Game 13</a></div>
+                <div class="game_card"><img src="assets/imgs/game14.png" alt="Game 14"><a href="#">Game 14</a></div>
+                <div class="game_card"><img src="assets/imgs/game15.png" alt="Game 15"><a href="#">Game 15</a></div>
+                <div class="game_card"><img src="assets/imgs/game16.png" alt="Game 16"><a href="#">Game 16</a></div>
+                <div class="game_card"><img src="assets/imgs/game17.png" alt="Game 17"><a href="#">Game 17</a></div>
+                <div class="game_card"><img src="assets/imgs/game18.png" alt="Game 18"><a href="#">Game 18</a></div>
+                <div class="game_card"><img src="assets/imgs/game19.png" alt="Game 19"><a href="#">Game 19</a></div>
+                <div class="game_card"><img src="assets/imgs/game20.png" alt="Game 20"><a href="#">Game 20</a></div>
             </div>
         </section>
     </main>
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 Bilota. All rights reserved.</p>
-        <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a>
+        <p>&copy; 2024 Bilota. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a></p>
     </footer>
 
-    <!-- Search Functionality Script -->
     <script>
         function searchFunction() {
-            const query = document.getElementById('searchInput').value.toLowerCase();
-            alert('Search initiated for: ' + query); // You can replace this with actual search logic
+            let query = document.getElementById('searchInput').value.toLowerCase();
+            alert('Search initiated for: ' + query); // Placeholder for search logic
         }
     </script>
 </body>
