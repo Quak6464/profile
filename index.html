@@ -87,6 +87,7 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr); /* Two games per row */
             gap: 1.5rem;
+            grid-template-rows: auto;
         }
 
         .game_card {
@@ -141,6 +142,19 @@
 
         footer a:hover {
             text-decoration: underline;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            /* On small screens, change to a single-column layout */
+            .games_section {
+                grid-template-columns: 1fr; /* One game per row */
+            }
+
+            .game_card {
+                height: 250px; /* Adjust the card height for mobile */
+                width: 100%; /* Make cards take up full width */
+            }
         }
     </style>
 </head>
@@ -217,9 +231,9 @@
                 </div>
                 <!-- Game 9 -->
                 <div class="game_card">
-                    <img src="assets/imgs/bonkio.jpg" alt="Bonk.io">
-                    <strong><a href="https://bonk.io" target="_blank">Bonk.io</a></strong>
-                    <p>A physics-based multiplayer platformer game.</p>
+                    <img src="assets/imgs/denjex.jpg" alt="Denjex">
+                    <strong><a href="https://denjex.com" target="_blank">Denjex</a></strong>
+                    <p>A competitive multiplayer online game.</p>
                 </div>
                 <!-- Game 10 -->
                 <div class="game_card">
