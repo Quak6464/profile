@@ -159,7 +159,7 @@
         <section id="tool">
             <h2>Advanced Tools</h2>
             <p>Use the advanced tools below for email checks, password strength, and more!</p>
-            
+
             <!-- Tool 1: Email Spam Checker -->
             <section>
                 <h2>Email Spam Checker</h2>
@@ -199,87 +199,59 @@
                     <p id="urlCheckerResult" style="color: #00ccff;"></p>
                 </div>
             </section>
-        </section>
-    </main>
 
-    <!-- Footer Section -->
-    <footer>
-        <p>Made with ❤️ by Bilota.</p>
-    </footer>
+            <!-- Tool 5: IP Address Lookup -->
+            <section>
+                <h2>IP Address Lookup</h2>
+                <div class="tool_form">
+                    <input class="tool_input" type="text" id="ipLookup" placeholder="Enter IP address">
+                    <button class="tool_button" onclick="lookupIp()">Lookup IP</button>
+                    <p id="ipLookupResult" style="color: #00ccff;"></p>
+                </div>
+            </section>
 
-    <!-- JavaScript for tool functionality -->
-    <script>
-        // Tool 1: Email Spam Checker
-        function checkEmailSpam() {
-            const email = document.getElementById("emailChecker").value;
-            const spamKeywords = ["buy", "free", "winner", "congratulations", "offer", "limited time"];
-            const regex = /\S+@\S+\.\S+/;
+            <!-- Tool 6: QR Code Generator -->
+            <section>
+                <h2>QR Code Generator</h2>
+                <div class="tool_form">
+                    <input class="tool_input" type="text" id="qrInput" placeholder="Enter text for QR code">
+                    <button class="tool_button" onclick="generateQrCode()">Generate QR Code</button>
+                    <p id="qrCodeResult" style="color: #00ccff;"></p>
+                </div>
+            </section>
 
-            if (!regex.test(email)) {
-                document.getElementById("emailCheckerResult").textContent = "Invalid email format.";
-                return;
-            }
+            <!-- Tool 7: Base64 Encoder -->
+            <section>
+                <h2>Base64 Encoder</h2>
+                <div class="tool_form">
+                    <textarea class="tool_input" id="base64Input" placeholder="Enter text to encode"></textarea>
+                    <button class="tool_button" onclick="encodeBase64()">Encode Base64</button>
+                    <p id="base64Result" style="color: #00ccff;"></p>
+                </div>
+            </section>
 
-            const lowerCaseEmail = email.toLowerCase();
-            let isSpam = spamKeywords.some(keyword => lowerCaseEmail.includes(keyword));
-            document.getElementById("emailCheckerResult").textContent = isSpam ? "This email may be spam." : "This email looks safe.";
-        }
+            <!-- Tool 8: Base64 Decoder -->
+            <section>
+                <h2>Base64 Decoder</h2>
+                <div class="tool_form">
+                    <textarea class="tool_input" id="base64DecodeInput" placeholder="Enter Base64 text to decode"></textarea>
+                    <button class="tool_button" onclick="decodeBase64()">Decode Base64</button>
+                    <p id="base64DecodeResult" style="color: #00ccff;"></p>
+                </div>
+            </section>
 
-        // Tool 2: Password Strength Checker
-        function checkPasswordStrength() {
-            const password = document.getElementById("passwordChecker").value;
-            let strength = "Weak";
+            <!-- Tool 9: MD5 Hash Generator -->
+            <section>
+                <h2>MD5 Hash Generator</h2>
+                <div class="tool_form">
+                    <input class="tool_input" type="text" id="md5Input" placeholder="Enter text to hash">
+                    <button class="tool_button" onclick="generateMd5()">Generate MD5</button>
+                    <p id="md5Result" style="color: #00ccff;"></p>
+                </div>
+            </section>
 
-            if (password.length >= 8) {
-                const regexUpper = /[A-Z]/;
-                const regexLower = /[a-z]/;
-                const regexDigits = /\d/;
-                const regexSpecial = /[!@#$%^&*(),.?":{}|<>]/;
-
-                if (regexUpper.test(password) && regexLower.test(password) && regexDigits.test(password) && regexSpecial.test(password)) {
-                    strength = "Strong";
-                } else {
-                    strength = "Medium";
-                }
-            }
-
-            document.getElementById("passwordCheckerResult").textContent = `Password Strength: ${strength}`;
-        }
-
-        // Tool 3: Sentiment Analyzer
-        function analyzeSentiment() {
-            const text = document.getElementById("textSentiment").value;
-            const positiveWords = ["happy", "great", "love", "exciting", "good"];
-            const negativeWords = ["sad", "bad", "hate", "angry", "upset"];
-
-            let positiveCount = 0;
-            let negativeCount = 0;
-
-            const words = text.split(/\s+/);
-
-            words.forEach(word => {
-                if (positiveWords.includes(word.toLowerCase())) positiveCount++;
-                if (negativeWords.includes(word.toLowerCase())) negativeCount++;
-            });
-
-            if (positiveCount > negativeCount) {
-                document.getElementById("textSentimentResult").textContent = "Sentiment: Positive";
-            } else if (negativeCount > positiveCount) {
-                document.getElementById("textSentimentResult").textContent = "Sentiment: Negative";
-            } else {
-                document.getElementById("textSentimentResult").textContent = "Sentiment: Neutral";
-            }
-        }
-
-        // Tool 4: URL Safety Checker (Simulated)
-        function checkUrlSafety() {
-            const url = document.getElementById("urlChecker").value;
-            if (url.includes("malicious")) {
-                document.getElementById("urlCheckerResult").textContent = "Warning: This URL may be unsafe.";
-            } else {
-                document.getElementById("urlCheckerResult").textContent = "This URL seems safe.";
-            }
-        }
-    </script>
-</body>
-</html>
+            <!-- Tool 10: Caesar Cipher Encryptor -->
+            <section>
+                <h2>Caesar Cipher Encryptor</h2>
+                <div class="tool_form">
+                    <textarea class="tool_input" id="caesarInput" placeholder="Enter text to encrypt"></textarea
