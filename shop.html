@@ -8,7 +8,7 @@
     <link rel="icon" href="assets/imgs/inaya_pfp.gif">
 
     <!-- Title -->
-    <title>🌴 ・ Bilota</title>
+    <title>🌴 ・ Bilota Tool</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;600&display=swap" rel="stylesheet">
@@ -20,7 +20,7 @@
             font-family: 'Oxanium', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #0a0a1a; /* Dark gaming background */
+            background-color: #0a0a1a; /* Dark background */
             color: #ffffff; /* Light text for contrast */
         }
 
@@ -29,7 +29,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            background-color: #121212; /* Darker navigation bar */
+            background-color: #121212;
             padding: 1rem 2rem;
             border-bottom: 2px solid #333;
             display: flex;
@@ -56,7 +56,7 @@
         }
 
         .nav_links a:hover {
-            color: #00ffcc; /* Vibrant hover color */
+            color: #00ffcc;
             transform: scale(1.1);
         }
 
@@ -66,7 +66,7 @@
 
         section {
             margin-bottom: 2rem;
-            background-color: #1e1e2f; /* Slightly lighter for sections */
+            background-color: #1e1e2f;
             padding: 2rem;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -79,53 +79,7 @@
         }
 
         section h2 {
-            color: #00ccff; /* Bright section headings */
-        }
-
-        /* Tools Section Grid */
-        .tools_section {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr); /* Four tools per row */
-            gap: 1.5rem;
-            justify-items: center; /* Centers tool cards in the grid */
-        }
-
-        .tool_card {
-            background-color: #2a2a3f; /* Distinct background for cards */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between; /* Center content vertically within the card */
-            padding: 1rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            height: 300px; /* Set height to make it square */
-            width: 300px; /* Set width to make it square */
-        }
-
-        .tool_card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 255, 204, 0.5);
-        }
-
-        .tool_card img {
-            max-width: 100%;
-            height: 150px; /* Set height for image */
-            object-fit: cover; /* Make the image fit well */
-            border-radius: 8px;
-        }
-
-        .tool_card a {
-            color: #00ffcc; /* Bright blue for tool links */
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s, transform 0.3s;
-        }
-
-        .tool_card a:hover {
-            color: #ffcc00; /* Bright yellow on hover */
-            transform: scale(1.05);
+            color: #00ccff;
         }
 
         footer {
@@ -144,24 +98,65 @@
             text-decoration: underline;
         }
 
+        /* Tool Form */
+        .tool_form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .tool_input {
+            padding: 1rem;
+            background-color: #2a2a3f;
+            border: none;
+            border-radius: 8px;
+            color: #ffffff;
+            font-size: 1rem;
+        }
+
+        .tool_button {
+            padding: 1rem;
+            background-color: #00ccff;
+            border: none;
+            border-radius: 8px;
+            color: #ffffff;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .tool_button:hover {
+            background-color: #00aaff;
+        }
+
         /* Mobile Responsiveness */
-        @media (max-width: 1024px) {
-            /* On medium screens, change to three-column layout */
-            .tools_section {
-                grid-template-columns: repeat(3, 1fr);
+        @media (max-width: 768px) {
+            .tool_form {
+                gap: 0.5rem;
+            }
+
+            .tool_input, .tool_button {
+                width: 100%;
             }
         }
 
-        @media (max-width: 768px) {
-            /* On small screens, change to a single-column layout */
-            .tools_section {
-                grid-template-columns: 1fr; /* One tool per row */
-            }
+        /* Added margin between list items */
+        ul {
+            padding-left: 20px; /* Add padding to left of list */
+        }
 
-            .tool_card {
-                height: 250px; /* Adjust the card height for mobile */
-                width: 100%; /* Make cards take up full width */
-            }
+        li {
+            margin-bottom: 10px; /* Adds space between each list item */
+        }
+
+        li a {
+            color: #00aaff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        li a:hover {
+            color: #00ffcc;
         }
     </style>
 </head>
@@ -173,48 +168,51 @@
         </div>
         <ul class="nav_links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="shop.html">Shop</a></li>
+            <li><a href="tool.html">Tools</a></li>
             <li><a href="contacts.html">Contacts</a></li>
         </ul>
     </header>
 
     <!-- Main Content Section -->
     <main>
-        <section id="tools">
-            <h2>Tools</h2>
-            <div class="tools_section">
-                <!-- Tool 1 -->
-                <div class="tool_card">
-                    <img src="assets/imgs/tool1.jpg" alt="Tool 1">
-                    <strong><a href="https://tool1.com" target="_blank">Tool 1</a></strong>
-                    <p>Tool description goes here.</p>
-                </div>
-                <!-- Tool 2 -->
-                <div class="tool_card">
-                    <img src="assets/imgs/tool2.jpg" alt="Tool 2">
-                    <strong><a href="https://tool2.com" target="_blank">Tool 2</a></strong>
-                    <p>Tool description goes here.</p>
-                </div>
-                <!-- Tool 3 -->
-                <div class="tool_card">
-                    <img src="assets/imgs/tool3.jpg" alt="Tool 3">
-                    <strong><a href="https://tool3.com" target="_blank">Tool 3</a></strong>
-                    <p>Tool description goes here.</p>
-                </div>
-                <!-- Add remaining 17 tools here in the same format -->
-                <div class="tool_card">
-                    <img src="assets/imgs/tool4.jpg" alt="Tool 4">
-                    <strong><a href="https://tool4.com" target="_blank">Tool 4</a></strong>
-                    <p>Tool description goes here.</p>
-                </div>
-                <!-- Continue the rest up to Tool 20 -->
-            </div>
+        <section id="tool">
+            <h2>Advanced Tools</h2>
+            <p>Use the advanced tools below for email checks, password strength, and more!</p>
+
+            <!-- Added Tools List Section -->
+            <section>
+                <h2>Free & Uncommon Online Tools</h2>
+                <ul>
+                    <li><a href="https://www.clickup.com/" target="_blank">ClickUp</a> – Project management tool with task and time tracking features.</li>
+                    <li><a href="https://quire.io/" target="_blank">Quire</a> – Simple, collaborative project management with task lists and kanban boards.</li>
+                    <li><a href="https://www.zoho.com/notebook/" target="_blank">Zoho Notebook</a> – A note-taking app with rich multimedia features.</li>
+                    <li><a href="https://www.notion.so/" target="_blank">Notion (Free Version)</a> – Organize tasks, docs, and databases with a powerful interface.</li>
+                    <li><a href="https://crello.com/" target="_blank">Crello</a> – Free graphic design tool similar to Canva, with templates for social media and marketing materials.</li>
+                    <li><a href="https://vectr.com/" target="_blank">Vectr</a> – Free vector graphics software for designing logos, illustrations, and icons.</li>
+                    <li><a href="https://piktochart.com/" target="_blank">Piktochart</a> – Create infographics and reports with pre-made templates.</li>
+                    <li><a href="https://www.desygner.com/" target="_blank">Desygner</a> – Another graphic design tool offering templates for social media, business cards, and ads.</li>
+                    <li><a href="https://replit.com/" target="_blank">Replit</a> – Online coding environment with collaborative features.</li>
+                    <li><a href="https://glitch.com/" target="_blank">Glitch</a> – A platform for building and deploying apps with collaborative coding features.</li>
+                    <li><a href="https://jsfiddle.net/" target="_blank">JSFiddle</a> – Online IDE for web development, focusing on HTML, CSS, and JavaScript.</li>
+                    <li><a href="https://codesandbox.io/" target="_blank">CodeSandbox</a> – Create and share web apps directly in the browser, with live collaboration.</li>
+                    <li><a href="https://neilpatel.com/ubersuggest/" target="_blank">Ubersuggest</a> – Free SEO tool for keyword research, competitor analysis, and site audits.</li>
+                    <li><a href="https://www.mailerlite.com/" target="_blank">Mailerlite</a> – Free email marketing tool with basic automation and reporting features.</li>
+                    <li><a href="https://buffer.com/" target="_blank">Buffer</a> – Social media management tool with a limited free plan for scheduling posts.</li>
+                    <li><a href="https://answerthepublic.com/" target="_blank">Answer the Public</a> – Find out what people are searching for online based on topics and keywords.</li>
+                    <li><a href="https://www.pcloud.com/" target="_blank">pCloud</a> – Cloud storage offering up to 10GB free with file sharing features.</li>
+                    <li><a href="https://www.sync.com/" target="_blank">Sync.com</a> – Secure cloud storage with a free plan offering 5GB of space.</li>
+                    <li><a href="https://www.mediafire.com/" target="_blank">MediaFire</a> – File storage and sharing with a free account offering 10GB of storage.</li>
+                    <li><a href="https://miro.com/" target="_blank">Miro</a> – Online collaborative whiteboard for brainstorming and team collaboration.</li>
+                </ul>
+            </section>
+
         </section>
     </main>
 
     <!-- Footer Section -->
     <footer>
-        <p>Made with ❤️ by Bilota. <p/>
+        <p>made with ❤️ by bilota p>
     </footer>
+
 </body>
 </html>
